@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import gsap from "gsap";
 
 export default function RahilShahAnimation() {
   const textRef = useRef<HTMLSpanElement>(null);
@@ -9,10 +9,9 @@ export default function RahilShahAnimation() {
     const element = textRef.current;
     if (!element) return;
 
-    const originalText = "Rahil Shah"; // safer to hardcode here since we'll be replacing content anyway
+    const originalText = "Rahil Shah";
     element.textContent = "";
 
-    // Split into individual characters, preserving spaces
     const chars = originalText.split("").map((char) => {
       const span = document.createElement("span");
       span.className = "char inline-block";
@@ -35,7 +34,7 @@ export default function RahilShahAnimation() {
   return (
     <span
       ref={textRef}
-      className="inline-block max-w-[90%] text-4xl md:text-5xl font-normal text-left leading-tight break-words leading-tight "
+      className="inline-block max-w-[90%] text-4xl md:text-5xl font-normal text-left leading-tight break-words leading-tight"
       style={{ color: "#0a0a0a", wordBreak: "break-word", overflowWrap: "break-word" }}
     >
       Rahil Shah
