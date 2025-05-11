@@ -1,15 +1,21 @@
+// app/layout.tsx or app/layout.ts (Next.js 13/14)
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat, Prata } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// ✅ Use next/font for Montserrat
+const montserrat = Montserrat({
   subsets: ["latin"],
+  weight: ["100", "300", "400"],
+  variable: "--font-montserrat",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const prata = Prata({
   subsets: ["latin"],
+  weight: "400",
+  variable: "--font-prata",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -24,11 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${montserrat.variable} ${prata.variable} font-sans antialiased`}>{children}</body>
     </html>
   );
 }
