@@ -17,7 +17,7 @@ const HomePage = () => {
       </div>
 
       {/* Right section */}
-      <div className="w-1/2 flex items-center justify-end pr-10">
+      <div className="w-1/2 flex items-center justify-end pr-18">
         <NavLinks />
       </div>
     </main>
