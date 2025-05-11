@@ -35,7 +35,7 @@ export default function RahilShahAnimation() {
     <span
       ref={textRef}
       className="inline-block max-w-[90%] text-4xl md:text-5xl font-normal text-left leading-tight break-words leading-tight"
-      style={{ color: "#0a0a0a", wordBreak: "break-word", overflowWrap: "break-word" }}
+      style={{ color: "#1F2937", wordBreak: "break-word", overflowWrap: "break-word" }}
     >
       Rahil Shah
     </span>
