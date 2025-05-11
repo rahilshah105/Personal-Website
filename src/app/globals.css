@@ -31,3 +31,26 @@ body {
   font-family: 'Montserrat', sans-serif;
   min-height: 100vh;
 }
+
+.hover-underline-animation-reverse {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation-reverse::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #a9def9;
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation-reverse:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom right;
+}
