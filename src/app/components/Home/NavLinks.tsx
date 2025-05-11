@@ -30,7 +30,7 @@ const NavLinks: React.FC = () => {
       </li>
       <li className="[&>a]:block [&>a]:cursor-pointer [&>a]:text-[14vw] md:[&>a]:text-[9vw]">
         <a
-          href="contact"
+          href="/contact"
           className="leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12"
           aria-label="Contact"
         >

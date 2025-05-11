@@ -2,7 +2,7 @@
 import React from "react";
 import InfoHeader from "@/app/components/Home/InfoHeader";
 import NavLinks from "@/app/components/Home/NavLinks";
-import RahilShahAnimation from "./Textanimation";
+import RahilShahAnimation from "./components/Home/Textanimation";
 
 interface Article {
   title: string;
@@ -15,7 +15,7 @@ interface PageProps {
 
 const HomePage: React.FC<PageProps> = ({ latestArticle }) => {
   return (
-    <main className="flex h-screen w-screen bg-[#a7b3e3] text-slate-900">
+    <main className="flex h-screen w-screen bg-[#a9def9] text-slate-900">
       {/* Left section */}
       <div className="w-1/2 flex items-end px-10 pb-12">
         <InfoHeader
