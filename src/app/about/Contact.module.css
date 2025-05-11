@@ -1,0 +1,74 @@
+.main {
+    background-color: #1f2937;
+    color: #a9def9;
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 4rem;
+    padding: 2.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .main {
+      gap: 8rem;
+      padding: 6rem;
+    }
+  }
+  
+  .info {
+    padding: 0;
+    color: #a9def9;
+  }
+  
+  @media (min-width: 768px) {
+    .info {
+      padding: 2.5rem;
+    }
+  }
+  
+  .heading {
+    font-family: "Prata", serif;
+    font-size: 12vw;
+    text-transform: uppercase;
+    line-height: 0.95em;
+  }
+  
+  @media (min-width: 768px) {
+    .heading {
+      font-size: 7vw;
+    }
+  }
+  
+  .description {
+    display: block;
+  }
+  
+  .items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .item {
+    font-size: 0.875rem;
+    width: fit-content;
+  }
+  
+  .link {
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .link:hover {
+    text-decoration: none;
+  }
+  
+  .downloadLink {
+    display: block;
+    cursor: pointer;
+  }
+  
