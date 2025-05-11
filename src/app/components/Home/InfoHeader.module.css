@@ -7,14 +7,15 @@
     align-self: flex-end;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem; /* equivalent to space-y-3 */
+    gap: 0.5rem; /* equivalent to space-y-3 */
     text-wrap: balance; /* fallback for text-pretty, if supported */
+    margin: 0 0 2.5rem 2.5rem;
   }
   
   .heading {
     font-size: 1.875rem; /* text-3xl */
     font-weight: 600;
-    letter-spacing: 0.1em; /* tracking-widest */
+    letter-spacing: 0.1em; 
   }
   
   .role,

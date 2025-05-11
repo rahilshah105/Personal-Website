@@ -12,7 +12,7 @@ const NavLinks: React.FC = () => {
     >
       <li className="[&>a]:block [&>a]:cursor-pointer [&>a]:text-[14vw] md:[&>a]:text-[9vw]">
         <a
-          href="/en/projects"
+          href="/projects"
           className="leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12"
           aria-label="Projects"
         >
@@ -21,7 +21,7 @@ const NavLinks: React.FC = () => {
       </li>
       <li className="[&>a]:block [&>a]:cursor-pointer [&>a]:text-[14vw] md:[&>a]:text-[9vw]">
         <a
-          href="/en/services"
+          href="/services"
           className="leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12"
           aria-label="Services"
         >
@@ -30,7 +30,7 @@ const NavLinks: React.FC = () => {
       </li>
       <li className="[&>a]:block [&>a]:cursor-pointer [&>a]:text-[14vw] md:[&>a]:text-[9vw]">
         <a
-          href="/en/contact"
+          href="contact"
           className="leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12"
           aria-label="Contact"
         >
@@ -39,11 +39,11 @@ const NavLinks: React.FC = () => {
       </li>
       <li className="[&>a]:block [&>a]:cursor-pointer [&>a]:text-[14vw] md:[&>a]:text-[9vw]">
         <a
-          href="/en/blog"
+          href="/about"
           className="leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12"
-          aria-label="Blog"
+          aria-label="About"
         >
-          Blog
+          About
         </a>
       </li>
     </ul>

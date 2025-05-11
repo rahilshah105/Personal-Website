@@ -2,7 +2,6 @@
 import React from "react";
 import InfoHeader from "@/app/components/Home/InfoHeader";
 import NavLinks from "@/app/components/Home/NavLinks";
-import NewArticleModal from "@/app/components/Home/NewArticleModal";
 import RahilShahAnimation from "./Textanimation";
 
 interface Article {
@@ -30,9 +29,6 @@ const HomePage: React.FC<PageProps> = ({ latestArticle }) => {
       <div className="w-1/2 flex items-center justify-end pr-10">
         <NavLinks />
       </div>
-
-      {/* Modal in bottom-right */}
-      {latestArticle && <NewArticleModal title={latestArticle.title} url={latestArticle.url} />}
     </main>
   );
 };
