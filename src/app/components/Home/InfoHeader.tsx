@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
-import { gsap } from "gsap";
+import gsap from "gsap";
+
 import SocialMedia from "./SocialMedia";
 import styles from "./InfoHeader.module.css";
 
