@@ -2,6 +2,7 @@
 
 import React, { useEffect } from "react";
 import gsap from "gsap";
+import styles from "./Page.module.css";
 
 const projects = [
   {
@@ -62,43 +63,47 @@ const Page = () => {
       scaleY: 0,
       duration: 1,
       delay: 0.4,
+      onComplete: () => {
+        const curtain = document.getElementById("courtin");
+        if (curtain) curtain.remove();
+      },
     });
 
     document.body.style.backgroundColor = "#a9def9";
+
+    const scrollTarget = document.querySelector(`.${styles.linksSection}`);
+
+    const onWheel = (e: WheelEvent) => {
+      if (scrollTarget) {
+        scrollTarget.scrollTop += e.deltaY;
+        e.preventDefault();
+      }
+    };
+
+    document.addEventListener("wheel", onWheel, { passive: false });
+
+    return () => {
+      document.removeEventListener("wheel", onWheel);
+    };
   }, []);
 
   return (
-    <div
-      className="overflow-x-hidden relative text-[#a9def9] bg-[#1F2937]"
-      style={{ transition: "background-color 1s ease 1s" }}
-    >
-      {/* Animated Curtain */}
-      <div
-        id="courtin"
-        className="absolute inset-0 z-50 origin-bottom scale-y-100 bg-[#1F2937]"
-        style={{ transformOrigin: "bottom" }}
-      ></div>
+    <div className={styles.wrapper}>
+      <div id="courtin" className={styles.curtain}></div>
 
-      <main
-        id="page-main"
-        className="flex items-center px-10 relative text-[#a9def9] flex-col gap-10 justify-around md:flex-row md:gap-32 md:mt-0 md:px-24 mt-10 w-screen z-10"
-      >
-        <header
-          id="info"
-          className="flex flex-col z-10 3xl:bottom-20 bottom-10 flex-1 max-w-[650px] opacity-100 self-end sticky"
-          style={{ transform: "translateY(0px)" }}
-        >
+      <main className={styles.pageMain}>
+        <header className={styles.header}>
           <img
-            alt="Adrian Alvarez Alonso"
-            className="opacity-100 hidden aspect-square fade-in md:block object-cover p-10 w-full"
-            src="/_astro/Placeholder-Original.D3ETx0y8.webp"
+            alt="Rahil Shah"
+            className={styles.profileImage}
+            src="/aa.webp"
             height={400}
             width={400}
             loading="eager"
           />
           <div className="space-y-3">
             <h1 className="font-semibold text-4xl tracking-widest">Projects</h1>
-            <p className="text-sm">
+            <p className={styles.paragraph}>
               Explore a compilation of my finest endeavors spanning Web Design and Development. In a dynamic digital
               landscape, my role has transformed over the past 3 years, adapting to the ever-evolving realms of design
               and development. I remain committed to continuous learning, consistently acquiring new skills to stay at
@@ -107,21 +112,14 @@ const Page = () => {
           </div>
         </header>
 
-        <section
-          id="links"
-          className="opacity-100 flex-1 font-prata md:py-16 text-balance"
-          style={{ transform: "translateY(50px)" }}
-        >
+        <section id="links" className={styles.linksSection}>
           <ul className="space-y-10" role="navigation">
             {projects.map((project, index) => (
               <li className="project-item" data-image={project.image} key={index}>
-                <a
-                  className="block duration-500 ease-out hover:-skew-x-12 hover:translate-x-10 leading-[0.95em] md:text-[7vw] text-[12vw] transition-all uppercase"
-                  href={project.href}
-                >
+                <a className={styles.link} href={project.href}>
                   <h2 style={{ fontFamily: "'Prata', serif" }}>{project.title}</h2>
                 </a>
-                <h3 className="font-sans inline md:text-base pl-5 text-xs">{project.description}</h3>
+                <h3 className={styles.projectDescription}>{project.description}</h3>
               </li>
             ))}
           </ul>

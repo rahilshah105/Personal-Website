@@ -1,0 +1,115 @@
+/* Page.module.css */
+
+.wrapper {
+    overflow-x: hidden;
+    position: relative;
+    color: #a9def9;
+    background-color: #1F2937;
+    transition: background-color 1s ease 1s;
+    min-height: 100vh;
+  }
+  
+  .curtain {
+    position: absolute;
+    inset: 0;
+    z-index: 50;
+    transform-origin: bottom;
+    transform: scaleY(1);
+    background-color: #1F2937;
+    will-change: transform;
+  }
+  
+  .pageMain {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  @media (max-width: 768px) {
+    .pageMain {
+      display: block;
+    }
+  }
+  
+  .header {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #1F2937;
+    height: 55rem;;
+    position: sticky;
+    margin-top:4rem;
+  }
+  .paragraph {
+    font-size: 0.875rem; /* same as Tailwind's text-sm */
+    max-width: 55ch;     /* adjust as needed, e.g., 40ch or 600px */
+    line-height: 1.6;
+  }
+  
+  
+  .profileImage {
+    opacity: 1;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: none;
+    margin-bottom:2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .profileImage {
+      display: block;
+    }
+  }
+  
+  .linksSection {
+    overflow-y: auto;
+    height: 100%;
+    padding: 4rem 2rem 4rem 0;
+    font-family: 'Prata', serif;
+    text-wrap: balance;
+    background-color: #1F2937;
+  }
+  
+  .linksSection::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .linksSection::-webkit-scrollbar-thumb {
+    background-color: #a9def9;
+    border-radius: 8px;
+  }
+  
+  .linksSection::-webkit-scrollbar-track {
+    background-color: #1F2937;
+  }
+  
+  .link {
+    display: block;
+    transition: all 0.5s ease-out;
+    text-transform: uppercase;
+    line-height: 0.95em;
+  }
+  
+  .link:hover {
+    transform: translateX(2.5rem) skewX(-12deg);
+  }
+  
+  .projectDescription {
+    font-family: sans-serif;
+    padding-left: 1.25rem;
+    font-size: 0.75rem;
+  }
+  
+  @media (min-width: 768px) {
+    .link {
+      font-size: 7vw;
+    }
+  
+    .projectDescription {
+      font-size: 1rem;
+    }
+  }
+  
