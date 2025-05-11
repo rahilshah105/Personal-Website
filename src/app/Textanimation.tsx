@@ -1,66 +1,44 @@
+"use client";
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { TextPlugin } from "gsap/TextPlugin";
 
-// Register the TextPlugin for animated text effects
-gsap.registerPlugin(TextPlugin);
-
-/**
- * RahilShahAnimation – a standalone component that renders
- * a "Rahil Shah" heading with a wild, looping GSAP text animation.
- */
 export default function RahilShahAnimation() {
-  const textRef = useRef(null);
+  const textRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const element = textRef.current;
-    // Split text into individual span-wrapped characters
-    const chars = element.textContent.split("").map((char) => {
-      return `<span class='char inline-block'>${char}</span>`;
+    if (!element) return;
+
+    const originalText = "Rahil Shah"; // safer to hardcode here since we'll be replacing content anyway
+    element.textContent = "";
+
+    // Split into individual characters, preserving spaces
+    const chars = originalText.split("").map((char) => {
+      const span = document.createElement("span");
+      span.className = "char inline-block";
+      span.innerHTML = char === " " ? "&nbsp;" : char;
+      return span;
     });
-    element.innerHTML = chars.join("");
 
-    const charEls = element.querySelectorAll(".char");
+    chars.forEach((span) => element.appendChild(span));
 
-    // Build a timeline that loops infinitely, yoyos, and pauses between cycles
-    const tl = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: 1 });
-
-    // Animate characters from random positions, scales, and rotations
-    tl.from(charEls, {
+    gsap.from(element.querySelectorAll(".char"), {
+      delay: 0.8,
       opacity: 0,
-      x: () => gsap.utils.random(-200, 200),
-      y: () => gsap.utils.random(-200, 200),
-      rotation: () => gsap.utils.random(-360, 360),
-      scale: 0,
-      duration: 2.0,
-      ease: "elastic.out(1, 0.5)",
-      stagger: 0.12,
-    })
-      // Color-pulse effect
-      .to(
-        charEls,
-        {
-          color: "#F472B6", // Tailwind pink-400 (will inherit via CSS)
-          duration: 0.5,
-          stagger: 0.05,
-        },
-        0.5
-      )
-      // Return to original color
-      .to(
-        charEls,
-        {
-          color: "#FFFFFF",
-          duration: 1.5,
-          stagger: 0.05,
-        },
-        1
-      );
+      y: 30,
+      duration: 1.4,
+      ease: "power2.out",
+      stagger: 0.1,
+    });
   }, []);
 
   return (
-    <h1 ref={textRef} className="text-8xl md:text-8xl font-extrabold text-center text-white">
+    <span
+      ref={textRef}
+      className="inline-block max-w-[90%] text-4xl md:text-6xl font-extrabold text-left leading-tight break-words"
+      style={{ color: "#0a0a0a", wordBreak: "break-word", overflowWrap: "break-word" }}
+    >
       Rahil Shah
-    </h1>
+    </span>
   );
 }
