@@ -61,7 +61,6 @@ const Page = () => {
   useEffect(() => {
     document.body.style.backgroundColor = "#a9def9";
 
-    // Slide + fade in animation
     if (mainRef.current) {
       gsap.fromTo(mainRef.current, { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" });
     }
@@ -83,11 +82,28 @@ const Page = () => {
 
   return (
     <div className={styles.wrapper}>
-      <main
-        className={styles.pageMain}
-        ref={mainRef}
-        style={{ opacity: 0 }} // ✅ Start fully hidden
+      {/* Aside nav */}
+      <aside
+        className="items-center h-full bottom-0 fixed flex-col hidden justify-between left-0 md:flex px-10 top-0 w-10 z-50"
+        id="nav"
+        style={{ color: "#a9def9" }}
       >
+        <div className="flex items-center text-sm h-full md:-rotate-90 md:space-x-10 space-x-5 2xl:pl-32 justify-center pl-12">
+          <hr
+            className="md:w-20 w-10"
+            style={{
+              borderColor: "#a9def9",
+            }}
+          />
+          <a className="hover-underline-animation-reverse" href="/">
+            Home
+          </a>
+        </div>
+        <div className="flex items-center text-sm h-full md:-rotate-90 md:space-x-10 space-x-5 pointer-events-none pr-32"></div>
+      </aside>
+
+      {/* Main content */}
+      <main className={styles.pageMain} ref={mainRef} style={{ opacity: 0 }}>
         <header className={styles.header}>
           <img
             alt="Rahil Shah"
