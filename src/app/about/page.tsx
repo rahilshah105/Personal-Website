@@ -2,31 +2,13 @@
 
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-import styles from "./Contact.module.css";
+import styles from "./about.module.css";
 
-const contactItems = [
-  {
-    label: "Email",
-    subLabel: "superrahil10@gmail.com",
-    link: "mailto:superrahil10@gmail.com",
-  },
-  {
-    label: "Phone",
-    subLabel: "+34 647 31 72 14",
-    link: "tel:+34647317214",
-  },
-  {
-    label: "GitHub",
-    subLabel: "github.com/AdrianAlvarezAlonso",
-    link: "https://github.com/N4N1T0",
-  },
-];
-
-const Contact: React.FC = () => {
+const About: React.FC = () => {
   const mainRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    document.body.style.backgroundColor = "#1f2937"; // match contact background
+    document.body.style.backgroundColor = "#1f2937";
 
     if (mainRef.current) {
       gsap.fromTo(mainRef.current, { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" });
@@ -34,37 +16,65 @@ const Contact: React.FC = () => {
   }, []);
 
   return (
-    <main className={styles.main} ref={mainRef} style={{ opacity: 0 }}>
-      <div className={styles.info} id="info">
-        <h1 className={styles.heading}>Contact</h1>
-        <h2 className={styles.description}>
-          If you'd like to work with me or just have a chat, you can reach me here:
-        </h2>
+    <div className={styles.wrapper}>
+      {/* Aside nav */}
+      <aside
+        className="items-center h-full bottom-0 fixed flex-col hidden justify-between left-0 md:flex px-10 top-0 w-10 z-50"
+        id="nav"
+        style={{ color: "#a9def9" }}
+      >
+        <div className="flex items-center text-sm h-full md:-rotate-90 md:space-x-10 space-x-5 2xl:pl-32 justify-center pl-12">
+          <hr
+            className="md:w-20 w-10"
+            style={{
+              borderColor: "#a9def9",
+            }}
+          />
+          <a className="hover-underline-animation-reverse" href="/">
+            Home
+          </a>
+        </div>
+        <div className="flex items-center text-sm h-full md:-rotate-90 md:space-x-10 space-x-5 pointer-events-none pr-32"></div>
+      </aside>
 
-        <div className={styles.items}>
-          {contactItems.map(({ label, link, subLabel }) => (
-            <p className={styles.item} key={label}>
-              {label}:{" "}
-              <a href={link} target="_blank" rel="noopener noreferrer" className="hover-underline-animation-reverse">
-                {subLabel}
-              </a>
-            </p>
-          ))}
+      {/* Main about content */}
+      <main className={styles.main} ref={mainRef} style={{ opacity: 0 }}>
+        <div className={styles.info} id="info">
+          <h1 className={styles.heading}>About</h1>
+          <h2 className={styles.description}>
+            I'm Rahil Shah — a developer passionate about crafting beautiful, performant web experiences. I blend design
+            with technology to bring ideas to life across devices and platforms.
+          </h2>
+
+          <p className={styles.paragraph}>
+            With a background in business and computer science, I specialize in full-stack web development, AI-assisted
+            interfaces, and digital product strategy. I enjoy building tools that are not only functional but feel great
+            to use.
+          </p>
+
+          <p className={styles.paragraph}>
+            Currently working on Truvestor — a sentiment-driven investing platform — and always open to collaboration
+            and new ideas.
+          </p>
 
           <p className={styles.item}>
             <a
-              href="/en/Adrian_Alvarez_Alonso_CV.pdf"
+              href="/Resume/Rahil Shah Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hover-underline-animation-reverse"
             >
-              Download CV
+              Download Resume
             </a>
           </p>
         </div>
-      </div>
-    </main>
+
+        <div className={styles.imageWrapper}>
+          <img src="/main.png" alt="Rahil Shah full-body" className={styles.fullImage} loading="lazy" />
+        </div>
+      </main>
+    </div>
   );
 };
 
-export default Contact;
+export default About;

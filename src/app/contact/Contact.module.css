@@ -14,7 +14,7 @@
   
   @media (min-width: 768px) {
     .main {
-      gap: 8rem;
+      gap: 12rem;
       padding: 6rem;
     }
   }
@@ -22,6 +22,7 @@
   .info {
     padding: 0;
     color: #a9def9;
+    margin: 0 26rem 10rem 0;
   }
   
   @media (min-width: 768px) {
@@ -45,6 +46,8 @@
   
   .description {
     display: block;
+    margin-bottom:1.25rem;
+    margin-top:0.75rem;
   }
   
   .items {
