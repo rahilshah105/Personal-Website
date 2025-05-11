@@ -4,16 +4,7 @@ import InfoHeader from "@/app/components/Home/InfoHeader";
 import NavLinks from "@/app/components/Home/NavLinks";
 import RahilShahAnimation from "./components/Home/Textanimation";
 
-interface Article {
-  title: string;
-  url: string;
-}
-
-interface PageProps {
-  latestArticle?: Article;
-}
-
-const HomePage: React.FC<PageProps> = ({ latestArticle }) => {
+const HomePage = () => {
   return (
     <main className="flex h-screen w-screen bg-[#a9def9] text-slate-900">
       {/* Left section */}
