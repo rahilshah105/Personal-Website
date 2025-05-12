@@ -4,6 +4,8 @@
 
 html {
   scroll-behavior: smooth;
+    overflow-x: hidden;
+
 }
 
 :root {
@@ -54,3 +56,4 @@ body {
   transform: scaleX(1);
   transform-origin: bottom right;
 }
+
