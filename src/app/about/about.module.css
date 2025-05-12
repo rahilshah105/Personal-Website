@@ -114,3 +114,65 @@
     justify-content: center;
   }
 }
+
+/* ───────── NEW: mobile navbar ───────── */
+.mobileNavbar {
+  display: none; /* hidden by default */
+}
+
+@media (max-width: 768px) {
+  .mobileNavbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background-color: #1f2937;
+    z-index: 70;
+  }
+
+  .mobileNavbar a {
+    color: #a9def9;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobileNavbar {
+    display: none; /* keep hidden on desktop */
+  }
+}
+
+
+/* ───── MOBILE OVERRIDES ───── */
+@media (max-width: 768px) {
+  /* stack text then image */
+  .main {
+    flex-direction: column;
+    height: auto;
+    gap: 2rem;
+    padding-top: 5.5rem;
+  }
+
+  .info {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .imageWrapper {
+    position: static;
+    margin-top: 0;
+    align-items: center;
+    justify-content: center;
+    max-width: 240px;
+    width: 80%;
+  }
+}
+
+

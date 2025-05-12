@@ -1,3 +1,4 @@
+// src/app/components/Home/Page.tsx
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
@@ -38,7 +39,7 @@ const projects = [
   {
     title: "Sports Arbitrage",
     description:
-      "Real-time sports arbitrage calculator and alert system built for bettors to capitalize on odds differences.",
+      "Real-time sports arbitrage calculator and alert system for bettors to capitalize on odds differences.",
     href: "/en/projects/sports-arbitrage",
     type: "image",
     media: "/videos/sports.png",
@@ -48,6 +49,11 @@ const projects = [
 const Page: React.FC = () => {
   const mainRef = useRef<HTMLElement>(null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  /* ───── mobile carousel state ───── */
+  const [currentMobileIndex, setCurrentMobileIndex] = useState(0);
+  const handlePrev = () => setCurrentMobileIndex((i) => (i - 1 + projects.length) % projects.length);
+  const handleNext = () => setCurrentMobileIndex((i) => (i + 1) % projects.length);
 
   useEffect(() => {
     document.body.style.backgroundColor = "#a9def9";
@@ -68,9 +74,16 @@ const Page: React.FC = () => {
     return () => document.removeEventListener("wheel", onWheel);
   }, []);
 
+  const current = projects[currentMobileIndex];
+
   return (
     <div className={styles.wrapper}>
-      {/* Aside nav */}
+      {/* ───────── mobile navbar ───────── */}
+      <nav className={styles.mobileNavbar}>
+        <a href="/">Home</a>
+      </nav>
+
+      {/* ───────── desktop aside nav ───────── */}
       <aside
         className="items-center h-full bottom-0 fixed flex-col hidden justify-between left-0 md:flex px-10 top-0 w-10 z-50"
         id="nav"
@@ -90,10 +103,12 @@ const Page: React.FC = () => {
         <div className="flex items-center text-sm h-full md:-rotate-90 md:space-x-10 space-x-5 pointer-events-none pr-32"></div>
       </aside>
 
-      {/* Main content */}
+      {/* ───────── main content ───────── */}
       <main ref={mainRef} className={styles.pageMain} style={{ opacity: 0 }}>
+        {/* header (title & intro) */}
         <header className={styles.header}>
           <div
+            className={styles.headerPreview}
             style={{
               position: "relative",
               width: "600px",
@@ -149,13 +164,14 @@ const Page: React.FC = () => {
             <h1 className="font-semibold text-4xl tracking-widest">Projects</h1>
             <p className={styles.paragraph}>
               Explore a compilation of my finest endeavors spanning Web Design and Development. In a dynamic digital
-              landscape, my role has transformed over the past 3 years, adapting to the ever-evolving realms of design
-              and development. I remain committed to continuous learning, consistently acquiring new skills to stay at
-              the forefront of innovation.
+              landscape, my role has transformed over the past 3&nbsp;years, adapting to the ever-evolving realms of
+              design and development. I remain committed to continuous learning, consistently acquiring new skills to
+              stay at the forefront of innovation.
             </p>
           </div>
         </header>
 
+        {/* ───────── desktop links list ───────── */}
         <section id="links" className={styles.linksSection}>
           <ul className="space-y-10" role="navigation">
             {projects.map((project, index) => (
@@ -172,6 +188,29 @@ const Page: React.FC = () => {
               </li>
             ))}
           </ul>
+        </section>
+
+        {/* ───────── mobile carousel ───────── */}
+        <section className={styles.mobileCarousel}>
+          <a href={current.href}>
+            {current.type === "video" ? (
+              <video src={current.media} autoPlay muted loop playsInline controls={false} />
+            ) : (
+              <img src={current.media} alt={current.title} />
+            )}
+          </a>
+
+          <h2 className={styles.mobileProjectTitle}>{current.title}</h2>
+          <p className={styles.mobileProjectDesc}>{current.description}</p>
+
+          <div className={styles.carouselControls}>
+            <button onClick={handlePrev} aria-label="Previous project">
+              ←
+            </button>
+            <button onClick={handleNext} aria-label="Next project">
+              →
+            </button>
+          </div>
         </section>
       </main>
     </div>

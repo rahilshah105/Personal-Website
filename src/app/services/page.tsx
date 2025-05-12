@@ -1,3 +1,4 @@
+// src/app/components/Services/Page.tsx
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
@@ -39,6 +40,12 @@ const Page: React.FC = () => {
   const mainRef = useRef<HTMLElement>(null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
+  /* ───── mobile carousel state ───── */
+  const [currentMobileIndex, setCurrentMobileIndex] = useState(0);
+  const handlePrev = () => setCurrentMobileIndex((i) => (i - 1 + services.length) % services.length);
+  const handleNext = () => setCurrentMobileIndex((i) => (i + 1) % services.length);
+  const current = services[currentMobileIndex];
+
   useEffect(() => {
     document.body.style.backgroundColor = "#a9def9";
 
@@ -60,7 +67,12 @@ const Page: React.FC = () => {
 
   return (
     <div className={styles.wrapper}>
-      {/* Aside nav */}
+      {/* ───────── mobile navbar ───────── */}
+      <nav className={styles.mobileNavbar}>
+        <a href="/">Home</a>
+      </nav>
+
+      {/* ───────── desktop aside nav ───────── */}
       <aside
         className="items-center h-full bottom-0 fixed flex-col hidden justify-between left-0 md:flex px-10 top-0 w-10 z-50"
         id="nav"
@@ -80,8 +92,9 @@ const Page: React.FC = () => {
         <div className="flex items-center text-sm h-full md:-rotate-90 md:space-x-10 space-x-5 pointer-events-none pr-32"></div>
       </aside>
 
-      {/* Main content */}
+      {/* ───────── main content ───────── */}
       <main ref={mainRef} className={styles.pageMain} style={{ opacity: 0 }}>
+        {/* header (title & intro) */}
         <header className={styles.header}>
           <div
             style={{
@@ -89,12 +102,13 @@ const Page: React.FC = () => {
               width: "425px",
               height: "375px",
             }}
+            className={styles.headerPreview}
           >
-            {services.map((services, index) =>
-              services.type === "video" ? (
+            {services.map((srv, index) =>
+              srv.type === "video" ? (
                 <video
                   key={index}
-                  src={services.media}
+                  src={srv.media}
                   autoPlay
                   muted
                   loop
@@ -120,7 +134,6 @@ const Page: React.FC = () => {
                     position: "absolute",
                     top: 0,
                     left: 0,
-                    paddingBottom: "40px",
                     width: "100%",
                     height: "100%",
                     borderRadius: "15px",
@@ -131,14 +144,13 @@ const Page: React.FC = () => {
                   }}
                 >
                   <img
-                    src={services.media}
-                    alt={services.title}
+                    src={srv.media}
+                    alt={srv.title}
                     style={{
                       display: "block",
                       width: "100%",
                       height: "100%",
                       objectFit: "cover",
-                      borderRadius: "15px",
                     }}
                   />
                 </div>
@@ -149,29 +161,53 @@ const Page: React.FC = () => {
           <div className="space-y-3">
             <h1 className="font-semibold text-4xl tracking-widest">Services</h1>
             <p className={styles.paragraph}>
-              Take a look at some of my work in Web Design, Development, and Machine Learning. Over the past 4 years,
-              I’ve been building and improving my skills, always exploring new ways to create meaningful digital
-              experiences and keep up with the fast pace of tech.
+              Take a look at some of my work in Web&nbsp;Design, Development, and Machine&nbsp;Learning. Over the past
+              4&nbsp;years, I’ve been honing my skills and constantly exploring new ways to build meaningful digital
+              experiences.
             </p>
           </div>
         </header>
 
+        {/* ───────── desktop links list ───────── */}
         <section id="links" className={styles.linksSection}>
           <ul className="space-y-10" role="navigation">
-            {services.map((services, index) => (
+            {services.map((srv, index) => (
               <li
                 key={index}
                 className="project-item"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                <a className={styles.link} href={services.href}>
-                  <h2 style={{ fontFamily: "'Prata', serif" }}>{services.title}</h2>
+                <a className={styles.link} href={srv.href}>
+                  <h2 style={{ fontFamily: "'Prata', serif" }}>{srv.title}</h2>
                 </a>
-                <h3 className={styles.projectDescription}>{services.description}</h3>
+                <h3 className={styles.projectDescription}>{srv.description}</h3>
               </li>
             ))}
           </ul>
+        </section>
+
+        {/* ───────── mobile carousel ───────── */}
+        <section className={styles.mobileCarousel}>
+          <a href={current.href}>
+            {current.type === "video" ? (
+              <video src={current.media} autoPlay muted loop playsInline controls={false} />
+            ) : (
+              <img src={current.media} alt={current.title} />
+            )}
+          </a>
+
+          <h2 className={styles.mobileProjectTitle}>{current.title}</h2>
+          <p className={styles.mobileProjectDesc}>{current.description}</p>
+
+          <div className={styles.carouselControls}>
+            <button onClick={handlePrev} aria-label="Previous service">
+              ←
+            </button>
+            <button onClick={handleNext} aria-label="Next service">
+              →
+            </button>
+          </div>
         </section>
       </main>
     </div>

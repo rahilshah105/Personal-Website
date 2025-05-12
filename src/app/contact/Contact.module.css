@@ -1,4 +1,11 @@
-.main {
+/* src/app/components/Contact/Contact.module.css */
+
+.wrapper {
+    position: relative;
+  }
+  
+  /* ───────── existing styles (unchanged) ───────── */
+  .main {
     background-color: #1f2937;
     color: #a9def9;
     position: relative;
@@ -24,6 +31,11 @@
     color: #a9def9;
     margin: 0 26rem 10rem 0;
   }
+  @media (max-width: 768px) {
+    .info {
+        margin: 0 0 20rem 0;
+    }
+}
   
   @media (min-width: 768px) {
     .info {
@@ -46,8 +58,8 @@
   
   .description {
     display: block;
-    margin-bottom:1.25rem;
-    margin-top:0.75rem;
+    margin-bottom: 1.25rem;
+    margin-top: 0.75rem;
   }
   
   .items {
@@ -73,5 +85,39 @@
   .downloadLink {
     display: block;
     cursor: pointer;
+  }
+  
+  /* ───────── NEW: mobile navbar ───────── */
+  .mobileNavbar {
+    display: none; /* hidden by default */
+  }
+  
+  @media (max-width: 768px) {
+    .mobileNavbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem 1.5rem;
+      background-color: #1f2937;
+      z-index: 70;
+    }
+  
+    .mobileNavbar a {
+      color: #a9def9;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .mobileNavbar {
+      display: none; /* keep hidden on desktop */
+    }
   }
   
