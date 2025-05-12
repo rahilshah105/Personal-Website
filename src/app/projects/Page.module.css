@@ -66,6 +66,7 @@
   
   .linksSection {
     overflow-y: auto;
+    overflow-x: hidden;
     height: 100%;
     padding: 6rem 2rem 10rem 0;
     font-family: 'Prata', serif;

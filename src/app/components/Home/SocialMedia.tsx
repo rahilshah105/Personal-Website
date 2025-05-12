@@ -26,7 +26,7 @@ const SocialMedia: React.FC = () => {
       <ul className="mt-5 flex gap-5 px-2">
         {socialMedia.map(({ href, label, src }) => (
           <li key={href} className="list-none" title={label}>
-            <a href={href} target="_blank" rel="noopener noreferrer" className="group cursor-pointer">
+            <a href={href} target="_blank" rel="noopener noreferrer" className="group">
               <img
                 src={src}
                 alt={label}

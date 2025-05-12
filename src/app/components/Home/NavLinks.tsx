@@ -1,4 +1,3 @@
-// src/components/NavLinks.tsx
 "use client";
 import React from "react";
 
@@ -22,15 +21,15 @@ const NavLinks: React.FC = () => {
       id="links"
       role="navigation"
       aria-label="Main Navigation"
-      className="font-prata uppercase opacity-0 color-[#1F2937]"
+      className="font-prata uppercase opacity-0 text-[#1F2937]"
       style={{ fontFamily: "'Prata', serif" }}
     >
       {links.map(({ label, href }) => (
-        <li key={href} className="[&>a]:block [&>a]:cursor-pointer [&>a]:text-[14vw] md:[&>a]:text-[9vw]">
+        <li key={href}>
           <a
             href={href}
             onClick={(e) => handleClick(e, href)}
-            className="leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12"
+            className="block cursor-pointer text-[14vw] md:text-[9vw] leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12"
             aria-label={label}
           >
             {label}

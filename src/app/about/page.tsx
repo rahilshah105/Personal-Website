@@ -9,10 +9,15 @@ const About: React.FC = () => {
 
   useEffect(() => {
     document.body.style.backgroundColor = "#1f2937";
+    // document.body.style.overflow = "hidden";
 
     if (mainRef.current) {
       gsap.fromTo(mainRef.current, { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" });
     }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, []);
 
   return (

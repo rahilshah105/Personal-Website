@@ -91,7 +91,11 @@ const Page: React.FC = () => {
       </aside>
 
       {/* Main content */}
-      <main ref={mainRef} className={styles.pageMain} style={{ opacity: 0 }}>
+      <main
+        ref={mainRef}
+        className={styles.pageMain}
+        style={{ opacity: 0, pointerEvents: "auto" }} // ✅ add this
+      >
         <header className={styles.header}>
           <div
             style={{

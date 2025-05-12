@@ -1,62 +1,43 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import styles from "./Page.module.css";
 
-const projects = [
+const services = [
   {
-    title: "Termogar",
-    description:
-      "High-end e-commerce platform for aerothermal product sales, built and powered with these technologies:",
-    href: "/en/projects/termogar",
-    image: "/_astro/termogar-showcase.uV47bryf.webp",
+    title: "Frontend Development",
+    description: "Responsive, accessible, and modern UIs with React, TypeScript, or plain JS.",
+    href: "/en/projects/son-of-a-tailor",
+    type: "image",
+    media: "/Services/front.jpg",
   },
   {
-    title: "Lola Barcelona",
-    description:
-      "Ecommerce store for modern beauty and cosmetic products, created to enhance the user experience and built with the following technologies:",
-    href: "/en/projects/lola-barcelona",
-    image: "/_astro/vupf7r5l8wq60gzssvobyp885nf4.BK8ABJmf.webp",
+    title: "Backend Development",
+    description: "RESTful APIs, authentication, database design with Node.js, Express, and Supabase/PostgreSQL.",
+    href: "/en/projects/truvestor",
+    type: "image",
+    media: "/Services/back.jpg",
   },
   {
-    title: "Backswing",
-    description:
-      "Headless Woocommerce for selling paddle items, using Next.js as the application base and these technologies:",
-    href: "/en/projects/backswing",
-    image: "/_astro/backswing-showcase.xVYVfs-T.webp",
+    title: "Full-Stack Apps",
+    description: "End-to-end app development from planning to deployment (Next.js, Vercel, etc.).",
+    href: "/en/projects/enigma",
+    type: "image",
+    media: "/Services/full.webp",
   },
   {
-    title: "Lavanda del Lago",
-    description: "Ecommerce for selling lavender and natural products, created and powered by these technologies:",
-    href: "/en/projects/lavanda-del-lago",
-    image: "/_astro/lavanda-del-lago-showcase.BbotMfc8.webp",
-  },
-  {
-    title: "Striking Gold",
-    description:
-      "Sports blog powered by AI, using Davinci LLM to fine-tune the voice of articles with on-site editing technologies and also:",
-    href: "/en/projects/striking-gold",
-    image: "/_astro/striking-gold-showcase.Da9F4-3x.webp",
-  },
-  {
-    title: "Tough",
-    description:
-      "Eye-catching sports equipment e-commerce site, inspired by the Everlast website and built with these technologies:",
-    href: "/en/projects/tough",
-    image: "/_astro/tough-showcase.2P4GnwoK.webp",
-  },
-  {
-    title: "Nano Fighters Club",
-    description:
-      "Combat Sports Trainer site using Astro's new technologies to create maximum performance combined with:",
-    href: "/en/projects/nano-fighters-club",
-    image: "/_astro/nano-fighters-club-showcase.kJVVnM7q.webp",
+    title: "AI & ML Integration",
+    description: "Custom integrations with GPT, FinBERT, or other ML models.",
+    href: "/en/projects/sports-arbitrage",
+    type: "image",
+    media: "/Services/ai.png",
   },
 ];
 
-const Page = () => {
+const Page: React.FC = () => {
   const mainRef = useRef<HTMLElement>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   useEffect(() => {
     document.body.style.backgroundColor = "#a9def9";
@@ -74,10 +55,7 @@ const Page = () => {
     };
 
     document.addEventListener("wheel", onWheel, { passive: false });
-
-    return () => {
-      document.removeEventListener("wheel", onWheel);
-    };
+    return () => document.removeEventListener("wheel", onWheel);
   }, []);
 
   return (
@@ -103,35 +81,94 @@ const Page = () => {
       </aside>
 
       {/* Main content */}
-      <main className={styles.pageMain} ref={mainRef} style={{ opacity: 0 }}>
+      <main ref={mainRef} className={styles.pageMain} style={{ opacity: 0 }}>
         <header className={styles.header}>
-          <img
-            alt="Rahil Shah"
-            className={styles.profileImage}
-            src="/aa.webp"
-            height={400}
-            width={400}
-            loading="eager"
-          />
+          <div
+            style={{
+              position: "relative",
+              width: "425px",
+              height: "375px",
+            }}
+          >
+            {services.map((services, index) =>
+              services.type === "video" ? (
+                <video
+                  key={index}
+                  src={services.media}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls={false}
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "contain",
+                    borderRadius: "25px",
+                    opacity: hoveredIndex === index ? 1 : 0,
+                    transition: "opacity 0.5s ease-in-out",
+                    pointerEvents: "none",
+                  }}
+                />
+              ) : (
+                <div
+                  key={index}
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    paddingBottom: "40px",
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "15px",
+                    overflow: "hidden",
+                    opacity: hoveredIndex === index ? 1 : 0,
+                    transition: "opacity 0.5s ease-in-out",
+                    pointerEvents: "none",
+                  }}
+                >
+                  <img
+                    src={services.media}
+                    alt={services.title}
+                    style={{
+                      display: "block",
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      borderRadius: "15px",
+                    }}
+                  />
+                </div>
+              )
+            )}
+          </div>
+
           <div className="space-y-3">
-            <h1 className="font-semibold text-4xl tracking-widest">Projects</h1>
+            <h1 className="font-semibold text-4xl tracking-widest">Services</h1>
             <p className={styles.paragraph}>
-              Explore a compilation of my finest endeavors spanning Web Design and Development. In a dynamic digital
-              landscape, my role has transformed over the past 3 years, adapting to the ever-evolving realms of design
-              and development. I remain committed to continuous learning, consistently acquiring new skills to stay at
-              the forefront of innovation.
+              Take a look at some of my work in Web Design, Development, and Machine Learning. Over the past 4 years,
+              I’ve been building and improving my skills, always exploring new ways to create meaningful digital
+              experiences and keep up with the fast pace of tech.
             </p>
           </div>
         </header>
 
         <section id="links" className={styles.linksSection}>
           <ul className="space-y-10" role="navigation">
-            {projects.map((project, index) => (
-              <li className="project-item" data-image={project.image} key={index}>
-                <a className={styles.link} href={project.href}>
-                  <h2 style={{ fontFamily: "'Prata', serif" }}>{project.title}</h2>
+            {services.map((services, index) => (
+              <li
+                key={index}
+                className="project-item"
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                <a className={styles.link} href={services.href}>
+                  <h2 style={{ fontFamily: "'Prata', serif" }}>{services.title}</h2>
                 </a>
-                <h3 className={styles.projectDescription}>{project.description}</h3>
+                <h3 className={styles.projectDescription}>{services.description}</h3>
               </li>
             ))}
           </ul>
