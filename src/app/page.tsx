@@ -10,7 +10,7 @@ const HomePage = () => {
       {/* Left section */}
       <div className="w-full md:w-1/2 flex items-end md:items-end px-6 md:px-10 pb-10 md:pb-12">
         <InfoHeader
-          heading={<RahilShahAnimation />}
+          heading={<RahilShahAnimation key={Date.now()} />}
           role="Full-Stack Software Engineer"
           description="I'm a full-stack engineer focused on building fast, scalable web apps with clean code and great user experience—from React frontends to backend APIs and databases."
         />
