@@ -23,6 +23,11 @@ const About: React.FC = () => {
   return (
     <div className={styles.wrapper}>
       {/* Aside nav */}
+
+      <nav className={styles.mobileNavbar}>
+        <a href="/">Home</a>
+      </nav>
+
       <aside
         className="items-center h-full bottom-0 fixed flex-col hidden justify-between left-0 md:flex px-10 top-0 w-10 z-50"
         id="nav"

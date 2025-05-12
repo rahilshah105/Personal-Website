@@ -1,3 +1,4 @@
+// src/app/components/Contact/Contact.tsx
 "use client";
 
 import React, { useEffect, useRef } from "react";
@@ -30,7 +31,12 @@ const Contact: React.FC = () => {
 
   return (
     <div className={styles.wrapper}>
-      {/* Aside nav */}
+      {/* ───────── mobile top-center Home button ───────── */}
+      <nav className={styles.mobileNavbar}>
+        <a href="/">Home</a>
+      </nav>
+
+      {/* ───────── desktop aside nav (unchanged) ───────── */}
       <aside
         className="items-center h-full bottom-0 fixed flex-col hidden justify-between left-0 md:flex px-10 top-0 w-10 z-50"
         id="nav"
@@ -50,7 +56,7 @@ const Contact: React.FC = () => {
         <div className="flex items-center text-sm h-full md:-rotate-90 md:space-x-10 space-x-5 pointer-events-none pr-32"></div>
       </aside>
 
-      {/* Main contact content */}
+      {/* ───────── main contact content ───────── */}
       <main className={styles.main} ref={mainRef} style={{ opacity: 0 }}>
         <div className={styles.info} id="info">
           <h1 className={styles.heading}>Contact</h1>
