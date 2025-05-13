@@ -1,72 +1,302 @@
 [
-    {
-      "slug": "termogar",
-      "title": "Termogar",
-      "subtitle": "High-end e-commerce platform for aerothermal product sales, built and powered with these technologies:",
-      "headerBgColor": "red",
-      "tech": [
-        {
-          "name": "Next.js",
-          "description": "Used by some of the world’s largest companies…",
-          "link": "https://nextjs.org/"
-        },
-        {
-          "name": "Sanity",
-          "description": "Sanity is a content management platform…",
-          "link": "https://www.sanity.io/"
-        },
-        {
-          "name": "NextAuth",
-          "description": "NextAuth is an authentication and user management solution…",
-          "link": "https://authjs.dev/"
-        },
-        {
-          "name": "Resend & React Email",
-          "description": "Resend is an email delivery platform…",
-          "link": "https://resend.com/"
-        }
-      ],
-      "showcaseImage": "/_astro/termogar-showcase.uV47bryf_Z1rDVya.webp",
-      "contentHtml": "<p>To completely overhaul an outdated WordPress website…</p><p>Additionally, I integrated technologies such as…</p>",
-      "styleImage": "/_astro/termogar-style.CdqVOM1Y_e7dFk.webp",
-      "testimonial": {
-        "quote": "It has been a pleasure working with Adrian; his dedication…",
-        "author": "Alvaro Perez Muñoz, CEO of Termogar"
+  {
+    "slug": "truvestor",
+    "title": "Truvestor",
+    "subtitle": "AI-powered investing dashboard for sentiment analysis, portfolio tracking, and smart notifications, built and powered with these technologies:",
+    "headerBgColor": "#FF6F61",
+    "tech": [
+      {
+        "name": "Next.js",
+        "description": "Framework for server‐rendered React applications and static site generation.",
+        "link": "https://nextjs.org/"
       },
-      "codeLink": "https://github.com/N4N1T0/termogar-ecommerce-next",
-      "liveLink": "https://termogar-ecommerce-next.vercel.app/"
+      {
+        "name": "React",
+        "description": "Component-based UI library for building interactive frontends.",
+        "link": "https://reactjs.org/"
+      },
+      {
+        "name": "TypeScript",
+        "description": "Typed superset of JavaScript for safer, more maintainable code.",
+        "link": "https://www.typescriptlang.org/"
+      },
+      {
+        "name": "Supabase",
+        "description": "Backend as a Service providing PostgreSQL, Auth, and realtime subscriptions.",
+        "link": "https://supabase.com/"
+      },
+      {
+        "name": "Recharts",
+        "description": "Charting library built with React components for data visualization.",
+        "link": "https://recharts.org/"
+      },
+      {
+        "name": "GSAP",
+        "description": "Animation library for high-performance UI transitions.",
+        "link": "https://greensock.com/gsap/"
+      },
+      {
+        "name": "OpenAI API",
+        "description": "Used GPT-3.5 Turbo for real-time sentiment analysis of financial news.",
+        "link": "https://openai.com/"
+      },
+      {
+        "name": "TanStack Query",
+        "description": "Data-fetching library for caching, deduping, and synchronizing server state.",
+        "link": "https://tanstack.com/query"
+      }
+    ],
+    "showcaseImage": "/videos/truvestor.mp4",
+    "contentHtml": "<p>Truvestor provides real-time sentiment scores by fetching financial news via the OpenAI API, analyzing articles against user portfolios, and visualizing results with interactive Recharts dashboards.</p><p>Built on Next.js with Supabase for authentication and realtime data syncing, the platform uses GSAP for smooth animations and TanStack Query for resilient, cache-first data fetching.</p>",
+    "styleImage": "/_astro/truvestor-style.png",
+   
+    "codeLink": "https://github.com/rahilshah105/TheTruvestor",
+    "liveLink": "https://thetruvestor.com"
+  },
+  {
+    "slug": "son-of-a-tailor",
+    "title": "Son Of a Tailor",
+    "subtitle": "Custom-made e-commerce platform for fitted clothing, offering a seamless sizing and ordering experience, built with:",
+    "headerBgColor": "#f6e0b5",
+    "tech": [
+      {
+        "name": "Next.js",
+        "description": "Server-side rendering and static export for fast page loads.",
+        "link": "https://nextjs.org/"
+      },
+      {
+        "name": "React",
+        "description": "UI library for building component-driven interfaces.",
+        "link": "https://reactjs.org/"
+      },
+      {
+        "name": "TypeScript",
+        "description": "Adds static types to JavaScript for improved developer experience.",
+        "link": "https://www.typescriptlang.org/"
+      },
+      {
+        "name": "CSS Modules",
+        "description": "Scoping CSS to components to avoid naming collisions.",
+        "link": "https://github.com/css-modules/css-modules"
+      },
+      {
+        "name": "Stripe Checkout",
+        "description": "Embedded payment flows for secure credit card processing.",
+        "link": "https://stripe.com/docs/payments/checkout"
+      },
+      {
+        "name": "Sanity",
+        "description": "Headless CMS for managing product metadata and sizing rules.",
+        "link": "https://www.sanity.io/"
+      }
+    ],
+    "showcaseImage": "/videos/sonofatailor.mp4",
+    "contentHtml": "<p>Son Of a Tailor offers a step-by-step sizing wizard powered by Sanity CMS, letting users input measurements and preview custom fits in real time.</p><p>The frontend is built with Next.js and CSS Modules for isolated styling, and integrates Stripe Checkout for a streamlined, secure payment experience.</p>",
+    "styleImage": "/_astro/son-of-a-tailor-style.png",
+    "testimonial": {
+      "quote": "The custom sizing wizard is so intuitive—I've never shopped for clothes this seamlessly.",
+      "author": "Emma Johansson, Fashion Blogger"
     },
-    {
-      "slug": "lavanda-del-lago",
-      "title": "Lavanda del Lago",
-      "subtitle": "Artisanal lavender products e-shop built with a headless CMS and real-time chat support:",
-      "headerBgColor": "#4e647a",
-      "tech": [
-        {
-          "name": "React",
-          "description": "Component-driven UI library…",
-          "link": "https://reactjs.org/"
-        },
-        {
-          "name": "Strapi",
-          "description": "Open-source headless CMS…",
-          "link": "https://strapi.io/"
-        },
-        {
-          "name": "Chakra UI",
-          "description": "Accessible React component library…",
-          "link": "https://chakra-ui.com/"
-        }
-      ],
-      "showcaseImage": "/images/lavanda-showcase.png",
-      "contentHtml": "<p>I rebuilt the client’s old WooCommerce site using Strapi…</p><p>Added a WebSocket-powered chat feature for live support…</p>",
-      "styleImage": "/images/lavanda-style.png",
-      "testimonial": {
-        "quote": "Our online sales doubled in three months—best decision ever!",
-        "author": "María González, Founder of Lavanda del Lago"
+    "codeLink": "https://github.com/rahilshah105/son-of-a-tailor",
+    "liveLink": "https://son-of-a-tailor.vercel.app"
+  },
+  {
+    "slug": "x-clone",
+    "title": "X Clone",
+    "subtitle": "Full-stack clone of Twitter’s X platform with real-time feeds, authentication, and engagement features, built with:",
+    "headerBgColor": "#1DA1F2",
+    "tech": [
+      {
+        "name": "Next.js",
+        "description": "Hybrid static & server rendering for optimal performance.",
+        "link": "https://nextjs.org/"
       },
-      "codeLink": "https://github.com/yourusername/lavanda-del-lago",
-      "liveLink": "https://lavanda-del-lago.com"
-    }
-  ]
-  
+      {
+        "name": "React",
+        "description": "Modular UI components and hooks for state management.",
+        "link": "https://reactjs.org/"
+      },
+      {
+        "name": "TypeScript",
+        "description": "Type safety and auto-complete in IDE.",
+        "link": "https://www.typescriptlang.org/"
+      },
+      {
+        "name": "Firebase",
+        "description": "Realtime database and Cloud Firestore for live feeds and notifications.",
+        "link": "https://firebase.google.com/"
+      },
+      {
+        "name": "Tailwind CSS",
+        "description": "Utility-first CSS framework for rapid UI development.",
+        "link": "https://tailwindcss.com/"
+      },
+      {
+        "name": "NextAuth.js",
+        "description": "Authentication solution with support for OAuth providers.",
+        "link": "https://authjs.dev/"
+      }
+    ],
+    "showcaseImage": "/videos/Xclone.mp4",
+    "contentHtml": "<p>X Clone mimics the core experience of Twitter X, featuring real-time posting and feed updates via Firebase Cloud Firestore and authentication through NextAuth.js.</p><p>The UI is styled with Tailwind CSS, and the app uses Next.js edge functions to handle serverless comment and like endpoints.</p>",
+    "styleImage": "/_astro/x-clone-style.png",
+ 
+    "codeLink": "https://github.com/rahilshah105/twitter-x-clone",
+    "liveLink": "https://twitter-x-clone.vercel.app"
+  },
+  {
+    "slug": "enigma",
+    "title": "Enigma",
+    "subtitle": "Headless WooCommerce frontend built with Next.js, optimized for performance and flexibility, utilizing:",
+    "headerBgColor": "#111827",
+    "tech": [
+      {
+        "name": "Next.js",
+        "description": "SSG and ISR for ultra-fast page loads on product listings.",
+        "link": "https://nextjs.org/"
+      },
+      {
+        "name": "React",
+        "description": "Reusable components for product cards and checkout flow.",
+        "link": "https://reactjs.org/"
+      },
+      {
+        "name": "TypeScript",
+        "description": "Typed APIs and props for predictable builds.",
+        "link": "https://www.typescriptlang.org/"
+      },
+      {
+        "name": "WooCommerce REST API",
+        "description": "Headless connection to WordPress backend for product and cart management.",
+        "link": "https://woocommerce.com/document/woocommerce-rest-api/"
+      },
+      {
+        "name": "CSS Modules",
+        "description": "Scoped styling for theme consistency.",
+        "link": "https://github.com/css-modules/css-modules"
+      }
+    ],
+    "showcaseImage": "/videos/enigma.mp4",
+    "contentHtml": "<p>Enigma fetches product data from a headless WooCommerce backend via REST API, rendering listings and dynamic filters with Next.js ISR for near-instant updates.</p><p>Cart state is managed client-side, with checkout flows routed through WooCommerce’s secure endpoints, all styled via CSS Modules for maintainability.</p>",
+    "styleImage": "/_astro/enigma-style.png",
+    "testimonial": {
+      "quote": "Performance is outstanding—browsing feels instant and checkout couldn’t be smoother.",
+      "author": "Carlos Mendes, Senior Frontend Developer at Enigma"
+
+    },
+    "codeLink": "https://github.com/rahilshah105/enigma",
+    "liveLink": "https://enigma.vercel.app"
+  },
+  {
+    "slug": "heineken",
+    "title": "Heineken Concept",
+    "subtitle": "Creative landing page design for Heineken using GSAP and smooth animations to showcase products and brand, built with:",
+    "headerBgColor": "#00A75D",
+    "tech": [
+      {
+        "name": "Vue.js",
+        "description": "Reactive UI framework for component composition.",
+        "link": "https://vuejs.org/"
+      },
+      {
+        "name": "GSAP",
+        "description": "Advanced scroll-triggered animations for immersive experience.",
+        "link": "https://greensock.com/gsap/"
+      },
+      {
+        "name": "Locomotive Scroll",
+        "description": "Smooth scrolling library for parallax effects.",
+        "link": "https://locomotivemtl.github.io/locomotive-scroll/"
+      },
+      {
+        "name": "CSS Modules",
+        "description": "Scoped styles for modular component theming.",
+        "link": "https://github.com/css-modules/css-modules"
+      }
+    ],
+    "showcaseImage": "/videos/heineken.mp4",
+    "contentHtml": "<p>This Heineken concept page leverages GSAP ScrollTrigger for bottle animations and Locomotive Scroll for smooth parallax sections, all orchestrated in Vue components.</p><p>The design focuses on brand colors and interactive taste notes sections, with modular CSS Modules ensuring clean, conflict-free styles.</p>",
+    "styleImage": "/_astro/heineken-concept-style.png",
+
+    "codeLink": "https://github.com/rahilshah105/heineken-landing-page",
+    "liveLink": "https://heineken-landing-page.vercel.app"
+  },
+  {
+    "slug": "ai-video-bot",
+    "title": "AI-Video Bot",
+    "subtitle": "Automated video content generation tool using AI scripts and voice synthesis for short-form video platforms, built with:",
+    "headerBgColor": "#FFCA28",
+    "tech": [
+      {
+        "name": "Node.js",
+        "description": "Runtime for backend script execution and scheduling.",
+        "link": "https://nodejs.org/"
+      },
+      {
+        "name": "Express",
+        "description": "Minimal web framework to expose generation endpoints.",
+        "link": "https://expressjs.com/"
+      },
+      {
+        "name": "OpenAI API",
+        "description": "Generates video scripts via GPT-3.5 Turbo.",
+        "link": "https://openai.com/"
+      },
+      {
+        "name": "FFmpeg",
+        "description": "Command-line tool for stitching audio/video assets.",
+        "link": "https://ffmpeg.org/"
+      },
+      {
+        "name": "Google Cloud Text-to-Speech",
+        "description": "Synthesizes voiceovers for generated scripts.",
+        "link": "https://cloud.google.com/text-to-speech"
+      }
+    ],
+    "showcaseImage": "/videos/youtube.mp4",
+    "contentHtml": "<p>The AI-Video Bot backend uses the OpenAI API to draft video scripts, then calls Google Cloud Text-to-Speech for voiceovers and FFmpeg to assemble final MP4 files.</p><p>An Express server exposes endpoints to trigger generation on demand or via scheduled cron jobs, all orchestrated in Node.js.</p>",
+    "styleImage": "/_astro/ai-video-bot-style.png",
+
+    "codeLink": "https://github.com/rahilshah105/ai-video-bot",
+    "liveLink": "https://ai-video-bot.vercel.app"
+  },
+  {
+    "slug": "sports-arbitrage",
+    "title": "Sports Arbitrage",
+    "subtitle": "Real-time sports arbitrage calculator and alert system for bettors to capitalize on odds differences, built with:",
+    "headerBgColor": "#E57373",
+    "tech": [
+      {
+        "name": "React",
+        "description": "Live odds dashboard and user interface components.",
+        "link": "https://reactjs.org/"
+      },
+      {
+        "name": "Next.js",
+        "description": "Server‐side rendering for SEO-friendly pages.",
+        "link": "https://nextjs.org/"
+      },
+      {
+        "name": "TypeScript",
+        "description": "Static typing for calculation logic.",
+        "link": "https://www.typescriptlang.org/"
+      },
+      {
+        "name": "WebSockets",
+        "description": "Push updates for real-time odds streaming.",
+        "link": "https://developer.mozilla.org/docs/Web/API/WebSockets_API"
+      },
+      {
+        "name": "Node.js",
+        "description": "Backend service for arbitrage calculations and alerts.",
+        "link": "https://nodejs.org/"
+      }
+    ],
+    "showcaseImage": "/videos/sports.png",
+    "contentHtml": "<p>Sports Arbitrage fetches live odds via WebSockets, runs comparison algorithms in Node.js, and displays profitable opportunities in a React/Next.js dashboard.</p><p>Users can set custom thresholds for alerts; the backend pushes notifications when arbitrage windows open.</p>",
+    "styleImage": "/_astro/sports-arbitrage-style.png",
+
+    "codeLink": "https://github.com/rahilshah105/sports-arbitrage",
+    "liveLink": "https://sports-arbitrage.vercel.app"
+  }
+]

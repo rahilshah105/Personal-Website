@@ -9,7 +9,7 @@ const projects = [
   {
     title: "Truvestor",
     description: "AI-powered investing dashboard for sentiment analysis, portfolio tracking, and smart notifications.",
-    href: "/en/projects/truvestor",
+    href: "/projects/truvestor",
     type: "video",
     media: "/videos/truvestor.mp4",
   },
@@ -17,7 +17,7 @@ const projects = [
     title: "Son Of a Tailor",
     description:
       "Custom-made e-commerce platform for fitted clothing, offering a seamless sizing and ordering experience.",
-    href: "/en/projects/son-of-a-tailor",
+    href: "/projects/son-of-a-tailor",
     type: "video",
     media: "/videos/sonofatailor.mp4",
   },
@@ -25,14 +25,14 @@ const projects = [
     title: "X Clone",
     description:
       "Full-stack clone of Twitter's X platform with real-time feeds, authentication, and like/comment functionality.",
-    href: "/en/projects/twitter-x-clone",
+    href: "/projects/x-clone",
     type: "video",
     media: "/videos/Xclone.mp4",
   },
   {
     title: "Enigma",
     description: "Headless WooCommerce frontend built with Next.js, optimized for performance and flexibility.",
-    href: "/en/projects/enigma",
+    href: "/projects/enigma",
     type: "video",
     media: "/videos/enigma.mp4",
   },
@@ -40,7 +40,7 @@ const projects = [
     title: "Heineken Concept",
     description:
       "Creative landing page design for Heineken using GSAP and smooth animations to showcase products and brand.",
-    href: "/en/projects/heineken",
+    href: "/projects/heineken",
     type: "video",
     media: "/videos/heineken.mp4",
   },
@@ -48,7 +48,7 @@ const projects = [
     title: "AI-Video Bot",
     description:
       "Automated video content generation tool using AI scripts and voice synthesis for short-form video platforms.",
-    href: "/en/projects/ai-video-bot",
+    href: "/projects/ai-video-bot",
     type: "video",
     media: "/videos/youtube.mp4",
   },
@@ -56,7 +56,7 @@ const projects = [
     title: "Sports Arbitrage",
     description:
       "Real-time sports arbitrage calculator and alert system for bettors to capitalize on odds differences.",
-    href: "/en/projects/sports-arbitrage",
+    href: "/projects/sports-arbitrage",
     type: "image",
     media: "/videos/sports.png",
   },
