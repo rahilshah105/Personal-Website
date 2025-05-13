@@ -19,7 +19,7 @@ interface Project {
   liveLink: string;
 }
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return projects.map((p) => ({ slug: p.slug }));
 }
 
