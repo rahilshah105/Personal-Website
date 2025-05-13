@@ -1,6 +1,8 @@
 // app/projects/[slug]/page.tsx
+
 import { notFound } from "next/navigation";
 import projects from "@/data/projects.json";
+import ShowcaseVideo from "@/app/components/Projects/ShowcaseVideo";
 
 type Tech = { name: string; description: string; link: string };
 type Testimonial = { quote: string; author: string };
@@ -13,10 +15,10 @@ interface Project {
   tech: Tech[];
   showcaseImage: string;
   contentHtml: string;
-  styleImage: string;
-  testimonial: Testimonial;
-  codeLink: string;
-  liveLink: string;
+  styleImage?: string;
+  testimonial?: Testimonial;
+  codeLink?: string;
+  liveLink?: string;
 }
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
@@ -75,14 +77,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         {/* Header */}
         <section
           id="header"
-          className="flex justify-center items-end h-[70vh] w-full overflow-hidden text-center"
+          className=" flex justify-center items-end h-[70vh] w-full overflow-hidden text-center"
           style={{ backgroundColor: project.headerBgColor }}
         >
-          <h1 id="title" className="font-prata text-[11vw] text-white uppercase z-20">
+          <h1 id="title" style={{ fontFamily: "'Prata', serif" }} className="text-[11vw] text-white uppercase z-20">
             {project.title}
           </h1>
         </section>
-
         {/* Subtitle */}
         <h2
           id="subtitle"
@@ -90,7 +91,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         >
           {project.subtitle}
         </h2>
-
         {/* Tech List */}
         <ul className="flex flex-col gap-3 md:flex-row md:gap-5 md:px-10 px-5 w-full">
           {project.tech.map((t) => (
@@ -103,23 +103,32 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             </li>
           ))}
         </ul>
-
-        {/* Showcase */}
-        <img src={project.showcaseImage} alt={`${project.title} Showcase`} className="w-full max-w-screen-lg" />
+        {/* Showcase
+        <img src={project.showcaseImage} alt={`${project.title} Showcase`} className="w-full max-w-screen-lg" /> */}
+        {/* Showcase Video */}
+        {/* <video
+          src={project.showcaseImage}
+          className="w-full max-w-screen-lg rounded-lg"
+          autoPlay
+          loop
+          muted
+          playsInline
+        /> */}
+        <ShowcaseVideo src={project.showcaseImage} alt={`${project.title} Showcase`} />
 
         {/* Content */}
         <section id="content" className="custom-prose max-w-screen-lg">
           <div dangerouslySetInnerHTML={{ __html: project.contentHtml }} />
         </section>
-
-        {/* Style Image */}
-        <img src={project.styleImage} alt={`${project.title} Style`} className="my-10 max-w-screen-md" />
-
+        {/* Style Image
+        <img src={project.styleImage} alt={`${project.title} Style`} className="my-10 max-w-screen-md" /> */}
         {/* Testimonial */}
-        <section id="testimonial" className="md:leading-tight pb-12 text-center w-full max-w-screen-lg">
-          <h2 className="font-prata text-[3vw]">“{project.testimonial.quote}”</h2>
-          <p className="text-[2vw] mt-4">{project.testimonial.author}</p>
-        </section>
+        {project.testimonial && (
+          <section id="testimonial" className="md:leading-tight pb-12 text-center w-full max-w-screen-lg">
+            <h2 className="font-prata text-[3vw]">“{project.testimonial.quote}”</h2>
+            <p className="text-[2vw] mt-4">— {project.testimonial.author}</p>
+          </section>
+        )}
       </main>
     </div>
   );
