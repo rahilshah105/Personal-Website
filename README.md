@@ -151,7 +151,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-🔗 **Live Site**: [https://personal-website-chi-cyan-52.vercel.app](https://personal-website-chi-cyan-52.vercel.app)  
-🌐 **Portfolio**: [https://rahilshah.com](https://rahilshah.com)  
+🔗 **Live Site**: [http://rahilshah.com](http://rahilshah.com)  
 ✉️ **Email**: [superrahil10@gmail.com](mailto:superrahil10@gmail.com)  
 🐙 **GitHub**: [https://github.com/rahilshah105](https://github.com/rahilshah105)
