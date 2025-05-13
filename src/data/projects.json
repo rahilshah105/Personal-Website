@@ -1,0 +1,72 @@
+[
+    {
+      "slug": "termogar",
+      "title": "Termogar",
+      "subtitle": "High-end e-commerce platform for aerothermal product sales, built and powered with these technologies:",
+      "headerBgColor": "red",
+      "tech": [
+        {
+          "name": "Next.js",
+          "description": "Used by some of the world’s largest companies…",
+          "link": "https://nextjs.org/"
+        },
+        {
+          "name": "Sanity",
+          "description": "Sanity is a content management platform…",
+          "link": "https://www.sanity.io/"
+        },
+        {
+          "name": "NextAuth",
+          "description": "NextAuth is an authentication and user management solution…",
+          "link": "https://authjs.dev/"
+        },
+        {
+          "name": "Resend & React Email",
+          "description": "Resend is an email delivery platform…",
+          "link": "https://resend.com/"
+        }
+      ],
+      "showcaseImage": "/_astro/termogar-showcase.uV47bryf_Z1rDVya.webp",
+      "contentHtml": "<p>To completely overhaul an outdated WordPress website…</p><p>Additionally, I integrated technologies such as…</p>",
+      "styleImage": "/_astro/termogar-style.CdqVOM1Y_e7dFk.webp",
+      "testimonial": {
+        "quote": "It has been a pleasure working with Adrian; his dedication…",
+        "author": "Alvaro Perez Muñoz, CEO of Termogar"
+      },
+      "codeLink": "https://github.com/N4N1T0/termogar-ecommerce-next",
+      "liveLink": "https://termogar-ecommerce-next.vercel.app/"
+    },
+    {
+      "slug": "lavanda-del-lago",
+      "title": "Lavanda del Lago",
+      "subtitle": "Artisanal lavender products e-shop built with a headless CMS and real-time chat support:",
+      "headerBgColor": "#4e647a",
+      "tech": [
+        {
+          "name": "React",
+          "description": "Component-driven UI library…",
+          "link": "https://reactjs.org/"
+        },
+        {
+          "name": "Strapi",
+          "description": "Open-source headless CMS…",
+          "link": "https://strapi.io/"
+        },
+        {
+          "name": "Chakra UI",
+          "description": "Accessible React component library…",
+          "link": "https://chakra-ui.com/"
+        }
+      ],
+      "showcaseImage": "/images/lavanda-showcase.png",
+      "contentHtml": "<p>I rebuilt the client’s old WooCommerce site using Strapi…</p><p>Added a WebSocket-powered chat feature for live support…</p>",
+      "styleImage": "/images/lavanda-style.png",
+      "testimonial": {
+        "quote": "Our online sales doubled in three months—best decision ever!",
+        "author": "María González, Founder of Lavanda del Lago"
+      },
+      "codeLink": "https://github.com/yourusername/lavanda-del-lago",
+      "liveLink": "https://lavanda-del-lago.com"
+    }
+  ]
+  

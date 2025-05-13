@@ -22,11 +22,27 @@ const projects = [
     media: "/videos/sonofatailor.mp4",
   },
   {
+    title: "X Clone",
+    description:
+      "Full-stack clone of Twitter's X platform with real-time feeds, authentication, and like/comment functionality.",
+    href: "/en/projects/twitter-x-clone",
+    type: "video",
+    media: "/videos/Xclone.mp4",
+  },
+  {
     title: "Enigma",
     description: "Headless WooCommerce frontend built with Next.js, optimized for performance and flexibility.",
     href: "/en/projects/enigma",
     type: "video",
     media: "/videos/enigma.mp4",
+  },
+  {
+    title: "Heineken Concept",
+    description:
+      "Creative landing page design for Heineken using GSAP and smooth animations to showcase products and brand.",
+    href: "/en/projects/heineken",
+    type: "video",
+    media: "/videos/heineken.mp4",
   },
   {
     title: "AI-Video Bot",
