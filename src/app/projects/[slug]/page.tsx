@@ -22,9 +22,11 @@ interface Project {
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return projects.map((p) => ({ slug: p.slug }));
 }
+export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+  // await the async params
+  const { slug } = await params;
 
-export default async function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = projects.find((p) => p.slug === params.slug) as Project | undefined;
+  const project = projects.find((p) => p.slug === slug);
   if (!project) notFound();
 
   return (
