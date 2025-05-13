@@ -3,6 +3,7 @@
 import { notFound } from "next/navigation";
 import projects from "@/data/projects.json";
 import ShowcaseVideo from "@/app/components/Projects/ShowcaseVideo";
+import ProjectPageClient from "./ProjectPageClient";
 
 type Tech = { name: string; description: string; link: string };
 type Testimonial = { quote: string; author: string };
@@ -73,6 +74,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       </aside>
 
       {/* ───────── main content ───────── */}
+      <ProjectPageClient />
       <main className="flex flex-col items-center justify-center gap-10 md:gap-20 md:my-10 md:px-24 w-screen relative bg-[#a9def9] text-[#1f2937]">
         {/* Header */}
         <section
