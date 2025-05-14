@@ -99,9 +99,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             <li key={t.name} className="flex-1 space-y-2">
               <h3 className="font-bold md:text-lg">{t.name}</h3>
               <p className="text-sm md:text-base">{t.description}</p>
-              <a className="text-sm font-bold hover-underline-animation" href={t.link} target="_blank" rel="noreferrer">
-                Más Info
-              </a>
             </li>
           ))}
         </ul>
