@@ -60,38 +60,53 @@
     "headerBgColor": "#f6e0b5",
     "tech": [
       {
-        "name": "Next.js",
-        "description": "Server-side rendering and static export for fast page loads.",
-        "link": "https://nextjs.org/"
+        "name": "Vue.js",
+        "description": "Progressive JavaScript framework for building user interfaces.",
+        "link": "https://vuejs.org/"
       },
       {
-        "name": "React",
-        "description": "UI library for building component-driven interfaces.",
-        "link": "https://reactjs.org/"
+        "name": "Nuxt.js",
+        "description": "Vue framework for server-side rendering and powerful static site generation.",
+        "link": "https://nuxt.com/"
       },
       {
-        "name": "TypeScript",
-        "description": "Adds static types to JavaScript for improved developer experience.",
-        "link": "https://www.typescriptlang.org/"
+        "name": "Emotion",
+        "description": "CSS-in-JS library for writing performant, scoped styles with JavaScript.",
+        "link": "https://emotion.sh/docs/introduction"
       },
       {
-        "name": "CSS Modules",
-        "description": "Scoping CSS to components to avoid naming collisions.",
-        "link": "https://github.com/css-modules/css-modules"
+        "name": "Webpack",
+        "description": "A powerful bundler that compiles JavaScript modules and assets.",
+        "link": "https://webpack.js.org/"
       },
       {
-        "name": "Stripe Checkout",
-        "description": "Embedded payment flows for secure credit card processing.",
-        "link": "https://stripe.com/docs/payments/checkout"
+        "name": "PWA",
+        "description": "Progressive Web App support for offline access, fast loading, and installability.",
+        "link": "https://web.dev/progressive-web-apps/"
       },
       {
-        "name": "Sanity",
-        "description": "Headless CMS for managing product metadata and sizing rules.",
-        "link": "https://www.sanity.io/"
+        "name": "Open Graph",
+        "description": "Enables rich social media previews by embedding metadata in web pages.",
+        "link": "https://ogp.me/"
+      },
+      {
+        "name": "Sentry",
+        "description": "Real-time error tracking and monitoring to improve application reliability.",
+        "link": "https://sentry.io/"
+      },
+      {
+        "name": "Google Cloud CDN",
+        "description": "Global content delivery network for reducing latency and improving performance.",
+        "link": "https://cloud.google.com/cdn"
+      },
+      {
+        "name": "HTTP/3",
+        "description": "Next-gen HTTP protocol for faster and more reliable web performance.",
+        "link": "https://http3-explained.haxx.se/"
       }
     ],
     "showcaseImage": "/videos/sonofatailor.mp4",
-    "contentHtml": "<p>Son Of a Tailor offers a step-by-step sizing wizard powered by Sanity CMS, letting users input measurements and preview custom fits in real time.</p><p>The frontend is built with Next.js and CSS Modules for isolated styling, and integrates Stripe Checkout for a streamlined, secure payment experience.</p>",
+    "contentHtml": "<p>Son Of a Tailor offers a step-by-step sizing wizard powered by modern Vue and Nuxt technologies, letting users input measurements and preview custom fits in real time.</p><p>With Emotion for styling, Webpack for performance optimization, and Sentry for error monitoring, the app delivers a smooth, reliable e-commerce experience enhanced by PWA support and HTTP/3 delivery via Google Cloud CDN.</p>",
     "styleImage": "/_astro/son-of-a-tailor-style.png",
     "testimonial": {
       "quote": "The custom sizing wizard is so intuitive—I've never shopped for clothes this seamlessly.",
