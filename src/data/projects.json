@@ -54,6 +54,60 @@
     "liveLink": "https://thetruvestor.com"
   },
   {
+  "slug": "promptly",
+  "title": "Promptly",
+  "subtitle": "AI agent marketplace with pay-per-use access, real-time GPT-4 execution, and workspace management. Built and powered with these technologies:",
+  "headerBgColor": "#4F46E5",
+  "tech": [
+    {
+      "name": "Next.js",
+      "description": "React framework used for routing, server rendering, and static generation.",
+      "link": "https://nextjs.org/"
+    },
+    {
+      "name": "React",
+      "description": "Frontend library for building interactive and reusable UI components.",
+      "link": "https://reactjs.org/"
+    },
+    {
+      "name": "TypeScript",
+      "description": "Typed superset of JavaScript enabling safer, more predictable code.",
+      "link": "https://www.typescriptlang.org/"
+    },
+    {
+      "name": "Supabase",
+      "description": "Used for user authentication and session management.",
+      "link": "https://supabase.com/"
+    },
+    {
+      "name": "MongoDB",
+      "description": "Document database used for storing agents, users, and run history.",
+      "link": "https://www.mongodb.com/"
+    },
+    {
+      "name": "Redis + BullMQ",
+      "description": "Used for background job processing and agent execution queues.",
+      "link": "https://docs.bullmq.io/"
+    },
+    {
+      "name": "OpenAI API",
+      "description": "GPT-4 used for running agent tasks and generating user-facing output.",
+      "link": "https://openai.com/"
+    },
+    {
+      "name": "Stripe",
+      "description": "Payment processing platform used for purchasing agent runs securely.",
+      "link": "https://stripe.com/"
+    }
+  ],
+  "showcaseImage": "/videos/promptly2.mp4",
+  "contentHtml": "<p>Promptly is a full-stack AI agent marketplace that lets users browse, preview, and pay to run GPT-4–powered agents. Each agent can be purchased as a one-off run via Stripe, tracked via a tokenized usage system, and executed in real-time using BullMQ queues.</p><p>The platform features full workspace and run history management, secure access control, and a scalable backend powered by MongoDB and Redis.</p>",
+  "styleImage": "/_astro/promptly-style.png",
+  "codeLink": "https://github.com/rahilshah105/promptly",
+  "liveLink": "https://ai-agent-marketplace-lac.vercel.app"
+},
+
+  {
     "slug": "son-of-a-tailor",
     "title": "Son Of a Tailor",
     "subtitle": "Custom-made e-commerce platform for fitted clothing, offering a seamless sizing and ordering experience, built with:",

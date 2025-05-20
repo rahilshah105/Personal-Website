@@ -14,6 +14,15 @@ const projects = [
     media: "/videos/truvestor.mp4",
   },
   {
+    title: "Promptly",
+    description:
+      "AI agent marketplace with token-based access, GPT-4 execution, Stripe integration, and real-time run feedback.",
+    href: "/projects/promptly",
+    type: "video",
+    media: "/videos/promptly.mp4",
+  },
+
+  {
     title: "Son Of a Tailor",
     description:
       "Custom-made e-commerce platform for fitted clothing, offering a seamless sizing and ordering experience.",
