@@ -101,7 +101,7 @@
     }
   ],
   "showcaseImage": "/videos/promptly2.mp4",
-  "contentHtml": "<p>Promptly is a full-stack AI agent marketplace that lets users browse, preview, and pay to run GPT-4–powered agents. Each agent can be purchased as a one-off run via Stripe, tracked via a tokenized usage system, and executed in real-time using BullMQ queues.</p><p>The platform features full workspace and run history management, secure access control, and a scalable backend powered by MongoDB and Redis.</p>",
+  "contentHtml": "<p>Promptly is a full-stack AI agent marketplace that lets users browse, preview, and pay to run GPT-4–powered agents. Each agent can be purchased as a one-off run via Stripe, tracked via a tokenized usage system, and executed in real-time using BullMQ queues.</p><p>The platform features full workspace and run history management, secure access control, and a scalable backend powered by MongoDB and Redis. <em>Watch Live Demo Here: https://www.youtube.com/watch?v=seclyxy1ogA</em>/p>",
   "styleImage": "/_astro/promptly-style.png",
   "codeLink": "https://github.com/rahilshah105/promptly",
   "liveLink": "https://ai-agent-marketplace-lac.vercel.app"
