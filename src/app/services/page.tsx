@@ -7,6 +7,13 @@ import styles from "./Page.module.css";
 
 const services = [
   {
+    title: "Full-Stack Apps",
+    description: "End-to-end app development from planning to deployment (Next.js, Vercel, etc.).",
+    href: "/en/projects/enigma",
+    type: "image",
+    media: "/Services/full.webp",
+  },
+  {
     title: "Frontend Development",
     description: "Responsive, accessible, and modern UIs with React, TypeScript, or plain JS.",
     href: "/en/projects/son-of-a-tailor",
@@ -19,13 +26,6 @@ const services = [
     href: "/en/projects/truvestor",
     type: "image",
     media: "/Services/back.jpg",
-  },
-  {
-    title: "Full-Stack Apps",
-    description: "End-to-end app development from planning to deployment (Next.js, Vercel, etc.).",
-    href: "/en/projects/enigma",
-    type: "image",
-    media: "/Services/full.webp",
   },
   {
     title: "AI & ML Integration",
