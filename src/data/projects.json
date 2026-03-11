@@ -1,113 +1,52 @@
 [
   {
-    "slug": "truvestor",
-    "title": "Truvestor",
-    "subtitle": "AI-powered investing dashboard for sentiment analysis, portfolio tracking, and smart notifications, built and powered with these technologies:",
-    "headerBgColor": "#FF6F61",
-    "tech": [
-      {
-        "name": "Next.js",
-        "description": "Framework for server‐rendered React applications and static site generation.",
-        "link": "https://nextjs.org/"
-      },
-      {
-        "name": "React",
-        "description": "Component-based UI library for building interactive frontends.",
-        "link": "https://reactjs.org/"
-      },
-      {
-        "name": "TypeScript",
-        "description": "Typed superset of JavaScript for safer, more maintainable code.",
-        "link": "https://www.typescriptlang.org/"
-      },
-      {
-        "name": "Supabase",
-        "description": "Backend as a Service providing PostgreSQL, Auth, and realtime subscriptions.",
-        "link": "https://supabase.com/"
-      },
-      {
-        "name": "Recharts",
-        "description": "Charting library built with React components for data visualization.",
-        "link": "https://recharts.org/"
-      },
-      {
-        "name": "GSAP",
-        "description": "Animation library for high-performance UI transitions.",
-        "link": "https://greensock.com/gsap/"
-      },
-      {
-        "name": "OpenAI API",
-        "description": "Used GPT-3.5 Turbo for real-time sentiment analysis of financial news.",
-        "link": "https://openai.com/"
-      },
-      {
-        "name": "TanStack Query",
-        "description": "Data-fetching library for caching, deduping, and synchronizing server state.",
-        "link": "https://tanstack.com/query"
-      }
-    ],
-    "showcaseImage": "/videos/truvestor.mp4",
-    "contentHtml": "<p>Truvestor provides real-time sentiment scores by fetching financial news via the OpenAI API, analyzing articles against user portfolios, and visualizing results with interactive Recharts dashboards.</p><p>Built on Next.js with Supabase for authentication and realtime data syncing, the platform uses GSAP for smooth animations and TanStack Query for resilient, cache-first data fetching.</p>",
-    "styleImage": "/_astro/truvestor-style.png",
-   
-    "codeLink": "https://github.com/rahilshah105/TheTruvestor",
-    "liveLink": "https://thetruvestor.com"
-  },
-  {
-  "slug": "promptly",
-  "title": "Promptly",
-  "subtitle": "AI agent marketplace with pay-per-use access, real-time GPT-4 execution, and workspace management. Built and powered with these technologies:",
-  "headerBgColor": "#4F46E5",
+  "slug": "raptis-roofing",
+  "title": "Raptis Roofing",
+  "subtitle": "Website redesign for a roofing company focused on stronger credibility, a cleaner mobile experience, and more quote requests, built with:",
+  "headerBgColor": "#D8ECFF",
   "tech": [
     {
       "name": "Next.js",
-      "description": "React framework used for routing, server rendering, and static generation.",
+      "description": "Framework used to build a fast, modern, and responsive website experience.",
       "link": "https://nextjs.org/"
     },
     {
       "name": "React",
-      "description": "Frontend library for building interactive and reusable UI components.",
+      "description": "Component-based frontend library used to create reusable UI sections and smooth interactions.",
       "link": "https://reactjs.org/"
     },
     {
       "name": "TypeScript",
-      "description": "Typed superset of JavaScript enabling safer, more predictable code.",
+      "description": "Typed JavaScript used for safer, more maintainable frontend code.",
       "link": "https://www.typescriptlang.org/"
     },
     {
-      "name": "Supabase",
-      "description": "Used for user authentication and session management.",
-      "link": "https://supabase.com/"
+      "name": "CSS Modules",
+      "description": "Scoped styling approach used to keep the design clean, consistent, and maintainable.",
+      "link": "https://github.com/css-modules/css-modules"
     },
     {
-      "name": "MongoDB",
-      "description": "Document database used for storing agents, users, and run history.",
-      "link": "https://www.mongodb.com/"
+      "name": "GSAP",
+      "description": "Animation library used to add polished page transitions and motion across the site.",
+      "link": "https://greensock.com/gsap/"
     },
     {
-      "name": "Redis + BullMQ",
-      "description": "Used for background job processing and agent execution queues.",
-      "link": "https://docs.bullmq.io/"
-    },
-    {
-      "name": "OpenAI API",
-      "description": "GPT-4 used for running agent tasks and generating user-facing output.",
-      "link": "https://openai.com/"
-    },
-    {
-      "name": "Stripe",
-      "description": "Payment processing platform used for purchasing agent runs securely.",
-      "link": "https://stripe.com/"
+      "name": "Vercel",
+      "description": "Hosting and deployment platform used to publish the site with strong performance and reliability.",
+      "link": "https://vercel.com/"
     }
   ],
-  "showcaseImage": "/videos/promptly2.mp4",
-  "contentHtml": "<p>Promptly is a full-stack AI agent marketplace that lets users browse, preview, and pay to run GPT-4–powered agents. Each agent can be purchased as a one-off run via Stripe, tracked via a tokenized usage system, and executed in real-time using BullMQ queues.</p><p>The platform features full workspace and run history management, secure access control, and a scalable backend powered by MongoDB and Redis. <em>Watch Live Demo Here: https://www.youtube.com/watch?v=seclyxy1ogA</em>/p>",
-  "styleImage": "/_astro/promptly-style.png",
-  "codeLink": "https://github.com/rahilshah105/promptly",
-  "liveLink": "https://ai-agent-marketplace-lac.vercel.app"
+  "showcaseImage": "/videos/raptis.mp4",
+  "contentHtml": "<p>Raptis Roofing is a website redesign for a local roofing company focused on making the business look more credible online and improving the path from visitor to quote request.</p><p>The site was designed to feel modern, clean, and trustworthy, with clear service information, mobile-friendly layouts, strong calls to action, and a structure better suited for local service customers.</p>",
+  "styleImage": "/_astro/raptis-roofing-style.png",
+  "testimonial": {
+    "quote": "Working with Rahil on our new website was a game-changer. He transformed our online presence into something modern, clean, and professional that better reflects the quality of our work.",
+    "author": "Nick Raptis, Owner of Raptis Roofing"
+  },
+  "codeLink": "https://github.com/rahilshah105/raptis-roofing",
+  "liveLink": "https://raptisroofing.com"
 },
-
-  {
+{
     "slug": "son-of-a-tailor",
     "title": "Son Of a Tailor",
     "subtitle": "Custom-made e-commerce platform for fitted clothing, offering a seamless sizing and ordering experience, built with:",
@@ -170,49 +109,114 @@
     "liveLink": "https://son-of-a-tailor.vercel.app"
   },
   {
-    "slug": "x-clone",
-    "title": "X Clone",
-    "subtitle": "Full-stack clone of Twitter’s X platform with real-time feeds, authentication, and engagement features, built with:",
-    "headerBgColor": "#1DA1F2",
+  "slug": "promptly",
+  "title": "Promptly",
+  "subtitle": "AI agent marketplace with pay-per-use access, real-time GPT-4 execution, and workspace management. Built and powered with these technologies:",
+  "headerBgColor": "#4F46E5",
+  "tech": [
+    {
+      "name": "Next.js",
+      "description": "React framework used for routing, server rendering, and static generation.",
+      "link": "https://nextjs.org/"
+    },
+    {
+      "name": "React",
+      "description": "Frontend library for building interactive and reusable UI components.",
+      "link": "https://reactjs.org/"
+    },
+    {
+      "name": "TypeScript",
+      "description": "Typed superset of JavaScript enabling safer, more predictable code.",
+      "link": "https://www.typescriptlang.org/"
+    },
+    {
+      "name": "Supabase",
+      "description": "Used for user authentication and session management.",
+      "link": "https://supabase.com/"
+    },
+    {
+      "name": "MongoDB",
+      "description": "Document database used for storing agents, users, and run history.",
+      "link": "https://www.mongodb.com/"
+    },
+    {
+      "name": "Redis + BullMQ",
+      "description": "Used for background job processing and agent execution queues.",
+      "link": "https://docs.bullmq.io/"
+    },
+    {
+      "name": "OpenAI API",
+      "description": "GPT-4 used for running agent tasks and generating user-facing output.",
+      "link": "https://openai.com/"
+    },
+    {
+      "name": "Stripe",
+      "description": "Payment processing platform used for purchasing agent runs securely.",
+      "link": "https://stripe.com/"
+    }
+  ],
+  "showcaseImage": "/videos/promptly2.mp4",
+  "contentHtml": "<p>Promptly is a full-stack AI agent marketplace that lets users browse, preview, and pay to run GPT-4–powered agents. Each agent can be purchased as a one-off run via Stripe, tracked via a tokenized usage system, and executed in real-time using BullMQ queues.</p><p>The platform features full workspace and run history management, secure access control, and a scalable backend powered by MongoDB and Redis. <em>Watch Live Demo Here: https://www.youtube.com/watch?v=seclyxy1ogA</em>/p>",
+  "styleImage": "/_astro/promptly-style.png",
+  "codeLink": "https://github.com/rahilshah105/promptly",
+  "liveLink": "https://ai-agent-marketplace-lac.vercel.app"
+},
+{
+    "slug": "truvestor",
+    "title": "Truvestor",
+    "subtitle": "AI-powered investing dashboard for sentiment analysis, portfolio tracking, and smart notifications, built and powered with these technologies:",
+    "headerBgColor": "#FF6F61",
     "tech": [
       {
         "name": "Next.js",
-        "description": "Hybrid static & server rendering for optimal performance.",
+        "description": "Framework for server‐rendered React applications and static site generation.",
         "link": "https://nextjs.org/"
       },
       {
         "name": "React",
-        "description": "Modular UI components and hooks for state management.",
+        "description": "Component-based UI library for building interactive frontends.",
         "link": "https://reactjs.org/"
       },
       {
         "name": "TypeScript",
-        "description": "Type safety and auto-complete in IDE.",
+        "description": "Typed superset of JavaScript for safer, more maintainable code.",
         "link": "https://www.typescriptlang.org/"
       },
       {
-        "name": "Firebase",
-        "description": "Realtime database and Cloud Firestore for live feeds and notifications.",
-        "link": "https://firebase.google.com/"
+        "name": "Supabase",
+        "description": "Backend as a Service providing PostgreSQL, Auth, and realtime subscriptions.",
+        "link": "https://supabase.com/"
       },
       {
-        "name": "Tailwind CSS",
-        "description": "Utility-first CSS framework for rapid UI development.",
-        "link": "https://tailwindcss.com/"
+        "name": "Recharts",
+        "description": "Charting library built with React components for data visualization.",
+        "link": "https://recharts.org/"
       },
       {
-        "name": "NextAuth.js",
-        "description": "Authentication solution with support for OAuth providers.",
-        "link": "https://authjs.dev/"
+        "name": "GSAP",
+        "description": "Animation library for high-performance UI transitions.",
+        "link": "https://greensock.com/gsap/"
+      },
+      {
+        "name": "OpenAI API",
+        "description": "Used GPT-3.5 Turbo for real-time sentiment analysis of financial news.",
+        "link": "https://openai.com/"
+      },
+      {
+        "name": "TanStack Query",
+        "description": "Data-fetching library for caching, deduping, and synchronizing server state.",
+        "link": "https://tanstack.com/query"
       }
     ],
-    "showcaseImage": "/videos/Xclone.mp4",
-    "contentHtml": "<p>X Clone mimics the core experience of Twitter X, featuring real-time posting and feed updates via Firebase Cloud Firestore and authentication through NextAuth.js.</p><p>The UI is styled with Tailwind CSS, and the app uses Next.js edge functions to handle serverless comment and like endpoints.</p>",
-    "styleImage": "/_astro/x-clone-style.png",
- 
-    "codeLink": "https://github.com/rahilshah105/twitter-x-clone",
-    "liveLink": "https://twitter-x-clone.vercel.app"
+    "showcaseImage": "/videos/truvestor.mp4",
+    "contentHtml": "<p>Truvestor provides real-time sentiment scores by fetching financial news via the OpenAI API, analyzing articles against user portfolios, and visualizing results with interactive Recharts dashboards.</p><p>Built on Next.js with Supabase for authentication and realtime data syncing, the platform uses GSAP for smooth animations and TanStack Query for resilient, cache-first data fetching.</p>",
+    "styleImage": "/_astro/truvestor-style.png",
+   
+    "codeLink": "https://github.com/rahilshah105/TheTruvestor",
+    "liveLink": "https://thetruvestor.com"
   },
+  
+
   {
     "slug": "enigma",
     "title": "Enigma",
@@ -289,83 +293,5 @@
 
     "codeLink": "https://github.com/rahilshah105/heineken-landing-page",
     "liveLink": "https://heineken-landing-page.vercel.app"
-  },
-  {
-    "slug": "ai-video-bot",
-    "title": "AI-Video Bot",
-    "subtitle": "Automated video content generation tool using AI scripts and voice synthesis for short-form video platforms, built with:",
-    "headerBgColor": "#FFCA28",
-    "tech": [
-      {
-        "name": "Node.js",
-        "description": "Runtime for backend script execution and scheduling.",
-        "link": "https://nodejs.org/"
-      },
-      {
-        "name": "Express",
-        "description": "Minimal web framework to expose generation endpoints.",
-        "link": "https://expressjs.com/"
-      },
-      {
-        "name": "OpenAI API",
-        "description": "Generates video scripts via GPT-3.5 Turbo.",
-        "link": "https://openai.com/"
-      },
-      {
-        "name": "FFmpeg",
-        "description": "Command-line tool for stitching audio/video assets.",
-        "link": "https://ffmpeg.org/"
-      },
-      {
-        "name": "Google Cloud Text-to-Speech",
-        "description": "Synthesizes voiceovers for generated scripts.",
-        "link": "https://cloud.google.com/text-to-speech"
-      }
-    ],
-    "showcaseImage": "/videos/youtube.mp4",
-    "contentHtml": "<p>The AI-Video Bot backend uses the OpenAI API to draft video scripts, then calls Google Cloud Text-to-Speech for voiceovers and FFmpeg to assemble final MP4 files.</p><p>An Express server exposes endpoints to trigger generation on demand or via scheduled cron jobs, all orchestrated in Node.js.</p>",
-    "styleImage": "/_astro/ai-video-bot-style.png",
-
-    "codeLink": "https://github.com/rahilshah105/ai-video-bot",
-    "liveLink": "https://ai-video-bot.vercel.app"
-  },
-  {
-    "slug": "sports-arbitrage",
-    "title": "Sports Arbitrage",
-    "subtitle": "Real-time sports arbitrage calculator and alert system for bettors to capitalize on odds differences, built with:",
-    "headerBgColor": "#E57373",
-    "tech": [
-      {
-        "name": "React",
-        "description": "Live odds dashboard and user interface components.",
-        "link": "https://reactjs.org/"
-      },
-      {
-        "name": "Next.js",
-        "description": "Server‐side rendering for SEO-friendly pages.",
-        "link": "https://nextjs.org/"
-      },
-      {
-        "name": "TypeScript",
-        "description": "Static typing for calculation logic.",
-        "link": "https://www.typescriptlang.org/"
-      },
-      {
-        "name": "WebSockets",
-        "description": "Push updates for real-time odds streaming.",
-        "link": "https://developer.mozilla.org/docs/Web/API/WebSockets_API"
-      },
-      {
-        "name": "Node.js",
-        "description": "Backend service for arbitrage calculations and alerts.",
-        "link": "https://nodejs.org/"
-      }
-    ],
-    "showcaseImage": "/videos/sports.png",
-    "contentHtml": "<p>Sports Arbitrage fetches live odds via WebSockets, runs comparison algorithms in Node.js, and displays profitable opportunities in a React/Next.js dashboard.</p><p>Users can set custom thresholds for alerts; the backend pushes notifications when arbitrage windows open.</p>",
-    "styleImage": "/_astro/sports-arbitrage-style.png",
-
-    "codeLink": "https://github.com/rahilshah105/sports-arbitrage",
-    "liveLink": "https://sports-arbitrage.vercel.app"
   }
 ]

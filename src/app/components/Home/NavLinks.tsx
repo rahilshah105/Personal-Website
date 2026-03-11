@@ -6,14 +6,14 @@ const NavLinks: React.FC = () => {
     e.preventDefault();
     setTimeout(() => {
       window.location.href = href;
-    }, 300); // 500ms delay
+    }, 250);
   };
 
   const links = [
     { label: "Projects", href: "/projects" },
     { label: "Services", href: "/services" },
-    { label: "Contact", href: "/contact" },
     { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -21,7 +21,7 @@ const NavLinks: React.FC = () => {
       id="links"
       role="navigation"
       aria-label="Main Navigation"
-      className="font-prata uppercase opacity-0 text-[#1F2937]"
+      className="font-prata uppercase opacity-0 text-right text-[#1F2937]"
       style={{ fontFamily: "'Prata', serif" }}
     >
       {links.map(({ label, href }) => (
@@ -29,7 +29,7 @@ const NavLinks: React.FC = () => {
           <a
             href={href}
             onClick={(e) => handleClick(e, href)}
-            className="block cursor-pointer text-[14vw] md:text-[9vw] leading-[0.95em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12"
+            className="block cursor-pointer text-[12vw] leading-[0.88em] tracking-[-0.03em] transition-all duration-500 ease-out hover:translate-x-10 hover:-skew-x-12 md:text-[7vw]"
             aria-label={label}
           >
             {label}

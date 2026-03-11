@@ -7,38 +7,54 @@ import styles from "./Page.module.css";
 
 const services = [
   {
-    title: "Full-Stack Apps",
-    description: "End-to-end app development from planning to deployment (Next.js, Vercel, etc.).",
-    href: "/en/projects/enigma",
+    title: "Website Design",
+    description: "Custom websites for local businesses that need a clean, modern, and trustworthy online presence.",
+    href: "/contact",
     type: "image",
-    media: "/Services/full.webp",
+    media: "/Services/front.png",
   },
   {
-    title: "Frontend Development",
-    description: "Responsive, accessible, and modern UIs with React, TypeScript, or plain JS.",
-    href: "/en/projects/son-of-a-tailor",
+    title: "Website Redesigns",
+    description: "Redesign outdated websites to improve credibility, clarity, and the overall customer experience.",
+    href: "/contact",
     type: "image",
-    media: "/Services/front.jpg",
+    media: "/Services/compare.png",
   },
   {
-    title: "Backend Development",
-    description: "RESTful APIs, authentication, database design with Node.js, Express, and Supabase/PostgreSQL.",
-    href: "/en/projects/truvestor",
+    title: "Mobile Optimization",
+    description:
+      "Make sure your website looks polished and works smoothly on phones, where most local visitors first find you.",
+    href: "/contact",
     type: "image",
-    media: "/Services/back.jpg",
+    media: "/Services/mobile.png",
   },
   {
-    title: "AI & ML Integration",
-    description: "Custom integrations with GPT, FinBERT, or other ML models.",
-    href: "/en/projects/sports-arbitrage",
+    title: "Lead-Focused Pages",
+    description: "Create pages built around quote requests, contact forms, and clearer calls to action.",
+    href: "/contact",
     type: "image",
-    media: "/Services/ai.png",
+    media: "/Services/lead.png",
   },
+  // {
+  //   title: "Service Business Websites",
+  //   description:
+  //     "Websites tailored for roofing companies and other local service businesses that rely on trust and clear communication.",
+  //   href: "/contact",
+  //   type: "image",
+  //   media: "/Services/service-business.jpg",
+  // },
+  // {
+  //   title: "Ongoing Website Updates",
+  //   description: "Keep your site current with edits, new content, image updates, and small improvements over time.",
+  //   href: "/contact",
+  //   type: "image",
+  //   media: "/Services/updates.jpg",
+  // },
 ];
 
 const Page: React.FC = () => {
   const mainRef = useRef<HTMLElement>(null);
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number>(0);
 
   /* ───── mobile carousel state ───── */
   const [currentMobileIndex, setCurrentMobileIndex] = useState(0);
@@ -154,16 +170,15 @@ const Page: React.FC = () => {
                     }}
                   />
                 </div>
-              )
+              ),
             )}
           </div>
 
           <div className="space-y-3">
             <h1 className="font-semibold text-4xl tracking-widest">Services</h1>
             <p className={styles.paragraph}>
-              Take a look at some of my work in Web&nbsp;Design, Development, and Machine&nbsp;Learning. Over the past
-              4&nbsp;years, I’ve been honing my skills and constantly exploring new ways to build meaningful digital
-              experiences.
+              I design and build websites for roofing and local service businesses that want a stronger online presence,
+              better credibility, and a clearer path to customer inquiries.
             </p>
           </div>
         </header>
@@ -176,7 +191,7 @@ const Page: React.FC = () => {
                 key={index}
                 className="project-item"
                 onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
+                onMouseLeave={() => setHoveredIndex(0)}
               >
                 <a className={styles.link} href={srv.href}>
                   <h2 style={{ fontFamily: "'Prata', serif" }}>{srv.title}</h2>

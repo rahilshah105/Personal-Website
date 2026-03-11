@@ -52,22 +52,17 @@ const About: React.FC = () => {
         <div className={styles.info} id="info">
           <h1 className={styles.heading}>About</h1>
           <h2 className={styles.description}>
-            I'm Rahil Shah — a developer passionate about crafting beautiful, performant web experiences. I blend design
-            with technology to bring ideas to life across devices and platforms.
+            I’m Rahil Shah, a web designer and developer focused on helping roofing and local service businesses build a
+            stronger online presence. I create modern, mobile-friendly websites that look more credible, communicate
+            services clearly, and turn more visitors into leads.
           </h2>
 
           <p className={styles.paragraph}>
-            With a background in business and computer science, I specialize in full-stack web development, AI-assisted
-            interfaces, and digital product strategy. I enjoy building tools that are not only functional but feel great
-            to use.
+            With a background in business and technology, I approach each project with both design and results in mind.
+            My goal is to build websites that not only look good, but also help businesses grow.
           </p>
 
-          <p className={styles.paragraph}>
-            Currently working on Truvestor — a sentiment-driven investing platform — and always open to collaboration
-            and new ideas.
-          </p>
-
-          <p className={styles.item}>
+          {/* <p className={styles.item}>
             <a
               href="/Resume/Rahil Shah Resume.pdf"
               target="_blank"
@@ -75,6 +70,11 @@ const About: React.FC = () => {
               className="hover-underline-animation-reverse"
             >
               Download Resume
+            </a>
+          </p> */}
+          <p className={styles.item}>
+            <a href="/contact" className="hover-underline-animation-reverse">
+              Contact Me
             </a>
           </p>
         </div>

@@ -7,22 +7,16 @@ import styles from "./Page.module.css";
 
 const projects = [
   {
-    title: "Truvestor",
-    description: "AI-powered investing dashboard for sentiment analysis, portfolio tracking, and smart notifications.",
-    href: "/projects/truvestor",
-    type: "video",
-    media: "/videos/truvestor.mp4",
-  },
-  {
-    title: "Promptly",
+    slug: "raptis-roofing",
+    title: "Raptis Roofing",
     description:
-      "AI agent marketplace with token-based access, GPT-4 execution, Stripe integration, and real-time run feedback.",
-    href: "/projects/promptly",
+      "Website redesign for a roofing company focused on stronger credibility, a cleaner mobile experience, and more quote requests.",
+    href: "/projects/raptis-roofing",
     type: "video",
-    media: "/videos/promptly.mp4",
+    media: "/videos/raptis.mp4",
   },
-
   {
+    slug: "son-of-a-tailor",
     title: "Son Of a Tailor",
     description:
       "Custom-made e-commerce platform for fitted clothing, offering a seamless sizing and ordering experience.",
@@ -31,14 +25,23 @@ const projects = [
     media: "/videos/sonofatailor.mp4",
   },
   {
-    title: "X Clone",
-    description:
-      "Full-stack clone of Twitter's X platform with real-time feeds, authentication, and like/comment functionality.",
-    href: "/projects/x-clone",
+    slug: "promptly",
+    title: "Promptly",
+    description: "AI agent marketplace with pay-per-use access, real-time GPT-4 execution, and workspace management.",
+    href: "/projects/promptly",
     type: "video",
-    media: "/videos/Xclone.mp4",
+    media: "/videos/promptly2.mp4",
   },
   {
+    slug: "truvestor",
+    title: "Truvestor",
+    description: "AI-powered investing dashboard for sentiment analysis, portfolio tracking, and smart notifications.",
+    href: "/projects/truvestor",
+    type: "video",
+    media: "/videos/truvestor.mp4",
+  },
+  {
+    slug: "enigma",
     title: "Enigma",
     description: "Headless WooCommerce frontend built with Next.js, optimized for performance and flexibility.",
     href: "/projects/enigma",
@@ -46,6 +49,7 @@ const projects = [
     media: "/videos/enigma.mp4",
   },
   {
+    slug: "heineken",
     title: "Heineken Concept",
     description:
       "Creative landing page design for Heineken using GSAP and smooth animations to showcase products and brand.",
@@ -53,27 +57,11 @@ const projects = [
     type: "video",
     media: "/videos/heineken.mp4",
   },
-  {
-    title: "AI-Video Bot",
-    description:
-      "Automated video content generation tool using AI scripts and voice synthesis for short-form video platforms.",
-    href: "/projects/ai-video-bot",
-    type: "video",
-    media: "/videos/youtube.mp4",
-  },
-  {
-    title: "Sports Arbitrage",
-    description:
-      "Real-time sports arbitrage calculator and alert system for bettors to capitalize on odds differences.",
-    href: "/projects/sports-arbitrage",
-    type: "image",
-    media: "/videos/sports.png",
-  },
 ];
 
 const Page: React.FC = () => {
   const mainRef = useRef<HTMLElement>(null);
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(0);
 
   /* ───── mobile carousel state ───── */
   const [currentMobileIndex, setCurrentMobileIndex] = useState(0);
@@ -181,17 +169,15 @@ const Page: React.FC = () => {
                     pointerEvents: "none",
                   }}
                 />
-              )
+              ),
             )}
           </div>
 
           <div className="space-y-3">
             <h1 className="font-semibold text-4xl tracking-widest">Projects</h1>
             <p className={styles.paragraph}>
-              Explore a compilation of my finest endeavors spanning Web Design and Development. In a dynamic digital
-              landscape, my role has transformed over the past 3&nbsp;years, adapting to the ever-evolving realms of
-              design and development. I remain committed to continuous learning, consistently acquiring new skills to
-              stay at the forefront of innovation.
+              A selection of websites and digital products across local business, e-commerce, and AI-driven platforms.
+              Each project reflects a different design goal, business need, and user experience challenge.
             </p>
           </div>
         </header>
@@ -204,7 +190,7 @@ const Page: React.FC = () => {
                 key={index}
                 className="project-item"
                 onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
+                onMouseLeave={() => setHoveredIndex(0)}
               >
                 <a className={styles.link} href={project.href}>
                   <h2 style={{ fontFamily: "'Prata', serif" }}>{project.title}</h2>

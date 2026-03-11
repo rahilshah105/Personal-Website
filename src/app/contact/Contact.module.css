@@ -1,8 +1,11 @@
 /* src/app/components/Contact/Contact.module.css */
 
 .wrapper {
-    position: relative;
-  }
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #1f2937;
+}
   
   /* ───────── existing styles (unchanged) ───────── */
   .main {

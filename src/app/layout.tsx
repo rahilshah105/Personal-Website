@@ -33,8 +33,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${montserrat.variable} ${prata.variable} font-sans antialiased`}>{children}</body>
+    <html lang="en" className="bg-[#1F2937]">
+      <body className={`${montserrat.variable} ${prata.variable} bg-[#1F2937] font-sans antialiased`}>{children}</body>
     </html>
   );
 }

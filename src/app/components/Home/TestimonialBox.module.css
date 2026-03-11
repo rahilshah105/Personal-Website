@@ -1,66 +1,48 @@
 .container {
-  position: static; /* Default for mobile */
-  transition: opacity 700ms;
+  position: static;
   z-index: 10;
   margin-top: 1.5rem;
-  background-color: #1F2937;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),
-              0 4px 6px -2px rgba(0,0,0,0.05);
-  max-width: 20rem;
+  max-width: 21rem;
   margin-left: auto;
   margin-right: auto;
+  padding: 1rem 1.05rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(215, 224, 234, 0.95);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.06);
+  transition: opacity 700ms ease, transform 700ms ease;
   opacity: 0;
 }
 
-.container.visible {
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.visible {
   opacity: 1;
+  transform: translateY(0);
+}
+
+.kicker {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #64748b;
+  margin-bottom: 0.75rem;
 }
 
 .content {
-  margin-top: 0.75rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: #f7fafc;
-  overflow: hidden;
-  transition: max-height 500ms ease-in-out;
-  max-height: 72px;
+  margin-top: 0.8rem;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: #334155;
 }
 
-.container:hover .content {
-  max-height: 500px;
-}
-
-/* bounce keyframes */
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-  }
-  50% {
-    transform: translateY(0);
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
-}
-
-/* Desktop-only absolute positioning and animation */
 @media (min-width: 768px) {
   .container {
-    position: absolute;
-    top: 7.5rem;
-    left: 4rem;
-    margin-top: 0;
-    margin-left: 0;
-    animation: bounce 1s infinite;
-  }
-
-  .container:hover {
-    animation-play-state: paused;
-  }
-}
-@media (max-width: 767px) {
-  .content {
-    max-height: 1000px; /* essentially disable max-height */
+    position: static;
+    margin: 0;
   }
 }
